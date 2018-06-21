@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" type="collection"/>
+</database>
