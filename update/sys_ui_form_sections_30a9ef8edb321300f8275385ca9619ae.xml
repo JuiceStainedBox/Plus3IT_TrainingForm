@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="30a9ef8edb321300f8275385ca9619ae" sys_domain="global" table="x_237286_training_training_reimbursement_records" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>45a9ef8edb321300f8275385ca9619b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">a9cf5b86db321300f8275385ca9619e8</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>41a9ef8edb321300f8275385ca9619b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Section 1" display_value="Section 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f4a9ef8edb321300f8275385ca9619aa</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>89a9ef8edb321300f8275385ca9619b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>01a9ef8edb321300f8275385ca9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course 2" display_value="Course 2" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f8a9ef8edb321300f8275385ca9619ab</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8da9ef8edb321300f8275385ca9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course 3" display_value="Course 3" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ac</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>81a9ef8edb321300f8275385ca9619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course 4" display_value="Course 4" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f8a9ef8edb321300f8275385ca9619ac</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0da9ef8edb321300f8275385ca9619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course 5" display_value="Course 5" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ad</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>7</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:32:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b8faa302db721300f8275385ca96192f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:32:01</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>8</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:47:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d68eaf82db721300f8275385ca961913</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Employee Signature" display_value="Employee Signature" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">ca8e6f82db721300f8275385ca9619f6</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:47:41</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>9</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 14:04:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4d42b346db721300f8275385ca9619e0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="HR Signature" display_value="HR Signature" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">c1427346db721300f8275385ca96198c</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:04:00</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>10</position>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:24:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>42e6ffc6db721300f8275385ca961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Section 2" display_value="Section 2" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">46e6ffc6db721300f8275385ca961923</sys_ui_section>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:24:15</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>11</position>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:24:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8ae6ffc6db721300f8275385ca96192f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course I" display_value="Course I" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">4ee6ffc6db721300f8275385ca961923</sys_ui_section>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:24:16</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>12</position>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:26:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9257f30adb721300f8275385ca9619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course II" display_value="Course II" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">4e57f30adb721300f8275385ca961918</sys_ui_section>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:26:11</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>13</position>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:29:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c408bb0adb721300f8275385ca9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Course III" display_value="Course III" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">8408bb0adb721300f8275385ca9619a8</sys_ui_section>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:29:02</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>14</position>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:38:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f63ab38adb721300f8275385ca9619b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="Employee Signature [Section 2]" display_value="Employee Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f23a338adb721300f8275385ca9619a5</sys_ui_section>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:38:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>15</position>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:38:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3a3ab38adb721300f8275385ca9619be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_237286_training_training_reimbursement_records" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">30a9ef8edb321300f8275385ca9619ae</sys_ui_form>
+            <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:38:48</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_237286_training_training_reimbursement_records</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:18</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>30a9ef8edb321300f8275385ca9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_237286_training_training_reimbursement_records</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_ui_form_sections_30a9ef8edb321300f8275385ca9619ae</sys_update_name>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:18</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

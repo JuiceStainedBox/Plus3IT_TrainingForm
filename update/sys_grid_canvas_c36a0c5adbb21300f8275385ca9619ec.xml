@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_grid_canvas" unload_date="2018-06-21 16:03:38">
+    <sys_grid_canvas action="INSERT_OR_UPDATE">
+        <legacy_page display_value="PA New Tab">876a0c5adbb21300f8275385ca9619eb</legacy_page>
+        <name>PA New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>ryanma</sys_created_by>
+        <sys_created_on>2018-06-21 15:49:32</sys_created_on>
+        <sys_id>c36a0c5adbb21300f8275385ca9619ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA New Tab</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_grid_canvas_c36a0c5adbb21300f8275385ca9619ec</sys_update_name>
+        <sys_updated_by>ryanma</sys_updated_by>
+        <sys_updated_on>2018-06-21 15:49:32</sys_updated_on>
+    </sys_grid_canvas>
+</record_update>

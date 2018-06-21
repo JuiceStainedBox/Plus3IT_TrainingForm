@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_section_1_training_type" table="x_237286_training_training_reimbursement_records" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Certifications</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 15:03:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>44ef3302dbb21300f8275385ca961932</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:54</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Certifications</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4ea963cedb321300f8275385ca961970</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:27</sys_updated_on>
+            <value>cert</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Conferences/ Seminars</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>1</sequence>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 15:03:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>00ef3302dbb21300f8275385ca961934</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:54</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Conferences/Seminars</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>1</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>caa963cedb321300f8275385ca961972</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:27</sys_updated_on>
+            <value>conSem</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Education</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>2</sequence>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 15:03:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c8ef3302dbb21300f8275385ca961935</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:54</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Education</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>2</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>86a963cedb321300f8275385ca961974</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:27</sys_updated_on>
+            <value>edu</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Trainings with Certifications</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>3</sequence>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 15:03:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>84ef3302dbb21300f8275385ca961937</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:54</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Trainings with Certifications</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>3</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>42a963cedb321300f8275385ca961976</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:27</sys_updated_on>
+            <value>trainWCert</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Trainings with No Certification</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>4</sequence>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 15:03:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>40ef3302dbb21300f8275385ca961939</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:54</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Trainings with No Certification</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>4</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c2a963cedb321300f8275385ca961984</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:27</sys_updated_on>
+            <value>trainNoCert</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>5</sequence>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 15:03:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0cef3302dbb21300f8275385ca96193a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:54</sys_updated_on>
+            <value>-1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_training_type</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Other</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>5</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8ea963cedb321300f8275385ca961985</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 15:03:27</sys_updated_on>
+            <value>other</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_section_1_training_type</element>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_id>86a963cedb321300f8275385ca961972</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_section_1_training_type</sys_name>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_choice_x_237286_training_training_reimbursement_records_u_section_1_training_type</sys_update_name>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 13:26:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_section_2_course_1_cost" label="Actual Cost" language="en" table="x_237286_training_training_reimbursement_records">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_section_2_course_1_cost</element>
+            <help/>
+            <hint/>
+            <label>Actual Cost</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <plural>Actual Costs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ryanma</sys_created_by>
+            <sys_created_on>2018-06-21 14:24:16</sys_created_on>
+            <sys_id>82e6ffc6db721300f8275385ca96193d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Actual Cost</sys_name>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_documentation_x_237286_training_training_reimbursement_records_u_section_2_course_1_cost_en</sys_update_name>
+            <sys_updated_by>ryanma</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:24:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

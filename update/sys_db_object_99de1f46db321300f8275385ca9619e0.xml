@@ -14,7 +14,7 @@
         <label>Training Reimbursement Records</label>
         <live_feed_enabled>false</live_feed_enabled>
         <name>x_237286_training_training_reimbursement_records</name>
-        <number_ref display_value="TRAIN">e6af1b86db321300f8275385ca9619d0</number_ref>
+        <number_ref display_value="TRA">e6af1b86db321300f8275385ca9619d0</number_ref>
         <provider_class/>
         <read_access>true</read_access>
         <super_class display_value="Task" name="task">ff1df057042113006517fb8f196147c0</super_class>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Modifies 'u_estimated_total_cost' field based on the changes made to field 'u_estimated_course_cost', also takes in values from all the expenditures and updates any changes made.</description>
+        <field>u_section_1_course_cost</field>
+        <global>true</global>
+        <messages/>
+        <name>TRA_oCh_sec1_estCourse</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	var estCourseCost = parseFloat(g_form.getValue('u_section_1_course_cost').replace(/,/g,"").substring(1));
+	var estCarCost = parseFloat(g_form.getValue('u_section_1_car_cost').replace(/,/g,"").substring(4));
+	var estFlightCost = parseFloat(g_form.getValue('u_section_1_flight_cost').replace(/,/g,"").substring(4));
+	var estEverydayCost = parseFloat(g_form.getValue('u_section_1_everyday_cost').replace(/,/g,"").substring(4));
+	var estHotelCost = parseFloat(g_form.getValue('u_section_1_hotel_cost').replace(/,/g,"").substring(4));
+	
+	var estTotalCostFloat = estCourseCost + estCarCost + estFlightCost + estEverydayCost + estHotelCost;
+	var estTotalCostString = "$" + estTotalCostFloat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	g_form.setValue('u_section_1_total_cost', estTotalCostString);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>ryanma</sys_created_by>
+        <sys_created_on>2018-06-21 13:24:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fe382f4edb321300f8275385ca9619da</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>TRA_oCh_sec1_estCourse</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_script_client_fe382f4edb321300f8275385ca9619da</sys_update_name>
+        <sys_updated_by>justinpark</sys_updated_by>
+        <sys_updated_on>2018-06-21 15:28:40</sys_updated_on>
+        <table>x_237286_training_training_reimbursement_records</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

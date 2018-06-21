@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Modify sections 'course_#' based on 'u_section_1_course_number'.</description>
+        <field>u_section_1_course_number</field>
+        <global>true</global>
+        <messages/>
+        <name>TRA_oCh_sec1_courseNumber</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	//Type appropriate comment here, and begin script below
+	
+	switch(newValue){
+		case "1":
+		g_form.setValue('u_section_1_course_2_cost', 0.00);
+		g_form.setValue('u_section_1_course_3_cost', 0.00);
+		g_form.setValue('u_section_1_course_4_cost', 0.00);
+		g_form.setValue('u_section_1_course_5_cost', 0.00);
+		
+		setCoursesMandatory('2', false);
+		setCoursesMandatory('3', false);
+		setCoursesMandatory('4', false);
+		setCoursesMandatory('5', false);
+		
+		g_form.setSectionDisplay('course_2', false);
+		g_form.setSectionDisplay('course_3', false);
+		g_form.setSectionDisplay('course_4', false);
+		g_form.setSectionDisplay('course_5', false);
+		break;
+		
+		case "2":
+		g_form.setValue('u_section_1_course_3_cost', 0.00);
+		g_form.setValue('u_section_1_course_4_cost', 0.00);
+		g_form.setValue('u_section_1_course_5_cost', 0.00);
+		
+		setCoursesMandatory('2', true);
+		setCoursesMandatory('3', false);
+		setCoursesMandatory('4', false);
+		setCoursesMandatory('5', false);
+		
+		g_form.setSectionDisplay('course_2', true);
+		g_form.setSectionDisplay('course_3', false);
+		g_form.setSectionDisplay('course_4', false);
+		g_form.setSectionDisplay('course_5', false);
+		break;
+		
+		case "3":
+		g_form.setValue('u_section_1_course_4_cost', 0.00);
+		g_form.setValue('u_section_1_course_5_cost', 0.00);
+		
+		setCoursesMandatory('2', true);
+		setCoursesMandatory('3', true);
+		setCoursesMandatory('4', false);
+		setCoursesMandatory('5', false);
+		
+		g_form.setSectionDisplay('course_2', true);
+		g_form.setSectionDisplay('course_3', true);
+		g_form.setSectionDisplay('course_4', false);
+		g_form.setSectionDisplay('course_5', false);
+		break;
+		
+		case "4":
+		g_form.setValue('u_section_1_course_5_cost', 0.00);
+		
+		setCoursesMandatory('2', true);
+		setCoursesMandatory('3', true);
+		setCoursesMandatory('4', true);
+		setCoursesMandatory('5', false);
+			
+		g_form.setSectionDisplay('course_2', true);
+		g_form.setSectionDisplay('course_3', true);
+		g_form.setSectionDisplay('course_4', true);
+		g_form.setSectionDisplay('course_5', false);
+		break;
+		
+		case "5":
+		setCoursesMandatory('2', true);
+		setCoursesMandatory('3', true);
+		setCoursesMandatory('4', true);
+		setCoursesMandatory('5', true);
+			
+		g_form.setSectionDisplay('course_2', true);
+		g_form.setSectionDisplay('course_3', true);
+		g_form.setSectionDisplay('course_4', true);
+		g_form.setSectionDisplay('course_5', true);
+		break;
+		
+		default:
+		g_form.setValue('u_section_1_course_2_cost', 0.00);
+		g_form.setValue('u_section_1_course_3_cost', 0.00);
+		g_form.setValue('u_section_1_course_4_cost', 0.00);
+		g_form.setValue('u_section_1_course_5_cost', 0.00);
+		
+		setCoursesMandatory('2', false);
+		setCoursesMandatory('3', false);
+		setCoursesMandatory('4', false);
+		setCoursesMandatory('5', false);
+		
+		g_form.setSectionDisplay('course_2', false);
+		g_form.setSectionDisplay('course_3', false);
+		g_form.setSectionDisplay('course_4', false);
+		g_form.setSectionDisplay('course_5', false);
+		break;
+	}
+	
+}
+function setCoursesMandatory(num, b)
+{
+	g_form.setMandatory('u_section_1_course_' + num + '_name', b);
+	g_form.setMandatory('u_section_1_course_' + num + '_hours', b);
+	g_form.setMandatory('u_section_1_course_' + num + '_cost', b);
+	g_form.setMandatory('u_section_1_course_' + num + '_start_date', b);
+	g_form.setMandatory('u_section_1_course_' + num + '_end_date', b);
+	g_form.setMandatory('u_section_1_course_' + num + '_justification', b);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>justinpark</sys_created_by>
+        <sys_created_on>2018-06-21 13:18:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>51a7e74edb321300f8275385ca96192f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>TRA_oCh_sec1_courseNumber</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_script_client_51a7e74edb321300f8275385ca96192f</sys_update_name>
+        <sys_updated_by>justinpark</sys_updated_by>
+        <sys_updated_on>2018-06-21 15:37:07</sys_updated_on>
+        <table>x_237286_training_training_reimbursement_records</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_section_1_immediate_reimbursed" label="Immediate Amount Reimbursed" language="en" table="x_237286_training_training_reimbursement_records">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_section_1_immediate_reimbursed</element>
+            <help/>
+            <hint/>
+            <label>Immediate Amount Reimbursed</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <plural>Immediate Amount Reimbursed</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 14:14:10</sys_created_on>
+            <sys_id>4e947b86db721300f8275385ca96190c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Immediate Amount Reimbursed</sys_name>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_documentation_x_237286_training_training_reimbursement_records_u_section_1_immediate_reimbursed_en</sys_update_name>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-21 14:14:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
