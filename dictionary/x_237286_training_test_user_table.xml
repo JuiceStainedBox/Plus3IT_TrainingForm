@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Test User Table" max_length="40" name="x_237286_training_test_user_table" type="collection">
+        <element label="email" max_length="255" name="email" type="string_full_utf8"/>
+        <element label="First name" max_length="255" name="first_name" type="string_full_utf8"/>
+        <element label="Last name" max_length="255" name="last_name" type="string_full_utf8"/>
+    </element>
+</database>

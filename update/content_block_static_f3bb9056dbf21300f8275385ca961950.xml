@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_static">
+    <content_block_static action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame display_value="image_thumb_float_grid">2a2a8f21ef702000914304167b2256bf</frame>
+        <logged_on>false</logged_on>
+        <name>Training Reimbursement Form</name>
+        <static_content><![CDATA[<p><a title="Create New" href="https://dev57337.service-now.com/x_237286_training_training_reimbursement_records.do?sys_id&#61;-1&amp;sysparm_stack&#61;x_237286_training_training_reimbursement_records_list.do" rel="nofollow">Create New</a></p>]]></static_content>
+        <sys_class_name>content_block_static</sys_class_name>
+        <sys_created_by>ryanma</sys_created_by>
+        <sys_created_on>2018-06-21 17:05:51</sys_created_on>
+        <sys_id>f3bb9056dbf21300f8275385ca961950</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Training Reimbursement Form</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>content_block_static_f3bb9056dbf21300f8275385ca961950</sys_update_name>
+        <sys_updated_by>ryanma</sys_updated_by>
+        <sys_updated_on>2018-06-21 17:07:31</sys_updated_on>
+    </content_block_static>
+    <sys_translated_text action="delete_multiple" query="documentkey=f3bb9056dbf21300f8275385ca961950"/>
+</record_update>

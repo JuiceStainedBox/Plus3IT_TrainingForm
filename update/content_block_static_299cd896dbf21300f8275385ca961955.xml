@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="content_block_static">
+    <content_block_static action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>Training/ Tuiting Reimbursement Form</name>
+        <static_content><![CDATA[<div>The growth and development of our employees at Plus3 is something that we thrive on. We want to make</div>
+<div>sure that each employee is using their full $5000/ year training budget to continue their development at</div>
+<div>Plus3 IT. Below is a step by step instruction guide on what is needed to complete this form.</div>
+<div> </div>
+<div>Please note all expenses MUST be entered within 30 days of the training for reimbursement. Also,</div>
+<div>individual training time outside of prep courses is NOT chargeable and must be done on the employee&#39;s</div>
+<div>own time.</div>
+<div> </div>
+<div>If you have any other questions, please let me know. We want you to take full advantage of this program</div>
+<div>and its benefits.</div>
+<p> </p>
+<p><a title="Create New Form" href="https://dev57337.service-now.com/x_237286_training_training_reimbursement_records.do?sys_id&#61;-1&amp;sysparm_stack&#61;x_237286_training_training_reimbursement_records_list.do" rel="nofollow">Create New Form</a></p>]]></static_content>
+        <sys_class_name>content_block_static</sys_class_name>
+        <sys_created_by>ryanma</sys_created_by>
+        <sys_created_on>2018-06-21 17:09:30</sys_created_on>
+        <sys_id>299cd896dbf21300f8275385ca961955</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Training/ Tuiting Reimbursement Form</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>content_block_static_299cd896dbf21300f8275385ca961955</sys_update_name>
+        <sys_updated_by>ryanma</sys_updated_by>
+        <sys_updated_on>2018-06-21 17:11:57</sys_updated_on>
+    </content_block_static>
+    <sys_translated_text action="delete_multiple" query="documentkey=299cd896dbf21300f8275385ca961955"/>
+</record_update>

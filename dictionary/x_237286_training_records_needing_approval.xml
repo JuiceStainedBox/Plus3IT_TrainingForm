@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="4" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Approver" mandatory="true" max_length="200" name="u_approver" type="string"/>
+    </element>
+</database>

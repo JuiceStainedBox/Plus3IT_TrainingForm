@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>test_user_table</name>
+        <order>100</order>
+        <roles>x_237286_training.employee</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>ericsmith</sys_created_by>
+        <sys_created_on>2018-06-22 16:29:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8d4d19aadbb21300f8275385ca9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test_user_table</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_app_application_8d4d19aadbb21300f8275385ca9619a2</sys_update_name>
+        <sys_updated_by>ericsmith</sys_updated_by>
+        <sys_updated_on>2018-06-22 16:29:58</sys_updated_on>
+        <title>test_user_table</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

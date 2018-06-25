@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA New Tab">c36a0c5adbb21300f8275385ca9619ec</grid_canvas>
+        <height>14</height>
+        <portal_widget display_value="Created 2018-06-21 10:08:04">696c1096dbf21300f8275385ca961905</portal_widget>
+        <posx>0</posx>
+        <posy>0</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>ryanma</sys_created_by>
+        <sys_created_on>2018-06-21 17:08:04</sys_created_on>
+        <sys_id>216c1096dbf21300f8275385ca961907</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>c36a0c5adbb21300f8275385ca9619ec</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_216c1096dbf21300f8275385ca961907</sys_update_name>
+        <sys_updated_by>ryanma</sys_updated_by>
+        <sys_updated_on>2018-06-21 17:13:29</sys_updated_on>
+        <width>4</width>
+    </sys_grid_canvas_pane>
+</record_update>

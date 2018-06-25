@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_237286_training_records_needing_approval">x_237286_training_records_needing_approval</category>
+        <maximum_digits>7</maximum_digits>
+        <number>2000</number>
+        <prefix>REC</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>jackretcher</sys_created_by>
+        <sys_created_on>2018-06-21 18:49:01</sys_created_on>
+        <sys_id>5083341adb361300f8275385ca961927</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>REC</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_number_5083341adb361300f8275385ca961927</sys_update_name>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-21 18:49:01</sys_updated_on>
+    </sys_number>
+</record_update>

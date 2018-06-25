@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="x_237286_training_certifications" label="Certifications" language="en" table="sys_user">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_237286_training_certifications</element>
+            <help/>
+            <hint/>
+            <label>Certifications</label>
+            <language>en</language>
+            <name>sys_user</name>
+            <plural>Certifications</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>ericsmith</sys_created_by>
+            <sys_created_on>2018-06-21 18:38:53</sys_created_on>
+            <sys_id>44313816db361300f8275385ca9619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Certifications</sys_name>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_documentation_sys_user_x_237286_training_certifications_en</sys_update_name>
+            <sys_updated_by>ericsmith</sys_updated_by>
+            <sys_updated_on>2018-06-21 18:38:53</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

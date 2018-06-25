@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" type="collection">
+    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="4" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Total Amount Reimbursed" max_length="40" name="u_amount_reimbursed" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Labor Category" mandatory="true" max_length="40" name="u_choice_10" type="string">
             <choice>
@@ -57,6 +57,21 @@
         <element attributes="edge_encryption_enabled=true" label="Total Reimbursement Requested" max_length="30" name="u_reimbursemen_requested" type="string"/>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Taxi/Uber Costs" mandatory="true" max_length="20" name="u_section_1_car_cost" type="price"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Contract Code" mandatory="true" max_length="40" name="u_section_1_contract_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Contract Type" mandatory="true" max_length="40" name="u_section_1_contract_type" type="string">
+            <choice>
+                <element label="Berico Technologies: EAADS" sequence="0" value="0"/>
+                <element label="BAH EMT: TO4" sequence="1" value="1"/>
+                <element label="BAH EMT: TO6" sequence="2" value="2"/>
+                <element label="BAH EMT: TO7" sequence="3" value="3"/>
+                <element label="BAH EPS" sequence="4" value="4"/>
+                <element label="Acuity" sequence="5" value="5"/>
+                <element label="ACS CDO TO9" sequence="6" value="6"/>
+                <element label="CSRA DOS CSOS" sequence="7" value="7"/>
+                <element label="ManTech International" sequence="8" value="8"/>
+                <element label="Non-Billable G&amp;A" sequence="9" value="9"/>
+                <element label="Non-Billable OH" sequence="10" value="10"/>
+            </choice>
+        </element>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Cost" mandatory="true" max_length="20" name="u_section_1_course_1_cost" type="price"/>
         <element label="End Date" mandatory="true" max_length="40" name="u_section_1_course_1_end_date" type="glide_date"/>
         <element label="Hours of Training/Exam" mandatory="true" max_length="40" name="u_section_1_course_1_hours" type="glide_time"/>
