@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>When contract code changes, labor category updates</description>
+        <field>u_contract_code</field>
+        <global>true</global>
+        <messages/>
+        <name>APP_oCh_contract_code</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   
+  // Clear all of the choices from the labor field choice list
+    g_form.clearOptions('u_labor_category');
+	
+	// g_form.isRecord() prevents this from resetting the prev laborCat
+	if ( ( isLoading || newValue === '' ) && g_form.isNewRecord() ) {
+		g_form.addOption('u_labor_category', '-1', '-- None --');
+		return;
+   }
+    
+    /*
+     Master Contract Code List - Updated 6-15-18
+     0 - Berico Technologies: EAADS
+     1 - BAH EMT: TO4
+     2 - BAH EMT: TO6
+     3 - BAH EMT: TO7
+     4 - BAH EPS
+     5 - Acuity, Inc.
+     6 - ACS CDO TO9
+     7 - CSRA DOS CSOS
+     8 - ManTech International
+     9 - Non-Billable G&A
+     10 - Non-Billable OH
+     */
+    
+    switch( newValue ) {
+    case '0':
+        g_form.addOption('u_labor_category', '0', 'EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Hourly');
+        g_form.addOption('u_labor_category', '1', 'EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Surge CLIN - Hourly');
+        g_form.addOption('u_labor_category', '2', 'EAADS:Direct Labor:Software Engineer Level 1 (Gr 3) Surge CLIN - Hourly');
+        g_form.addOption('u_labor_category', '3', 'EAADS:Direct Labor:Software Engineer Level 3 (Gr 3) - Hourly');
+        g_form.addOption('u_labor_category', '4', 'EAADS:Direct Labor:Software Engineer Level 3 (Gr 3) Surge CLIN - Hourly');
+        g_form.addOption('u_labor_category', '5', 'EAADS:Direct Labor:Software Engineer Level 2 (Gr3) Hourly');
+        g_form.addOption('u_labor_category', '6', 'EAADS:Direct Labor:Software Engineer Level 2 (Gr3) Surge CLIN - Hourly');
+        g_form.addOption('u_labor_category', '7', 'EAADS:Direct Labor:Software Engnr Level 4 (Gr7) Hourly');
+        g_form.addOption('u_labor_category', '8', 'EAADS:Direct Labor:Software Engnr Level 4 (Gr7) OY1 Surge CLIN - Hourly');
+        break;
+    case '1':
+        g_form.addOption('u_labor_category', '9', 'EMT TO4: Direct Labor: Sr Solution Architect - Hourly');
+        g_form.addOption('u_labor_category', '10', 'EMT TO4: Direct Labor: Sr Data Engineer - Hourly');
+        break;
+    case '2':
+        g_form.addOption('u_labor_category', '11', 'EMT TO6: Direct Labor: SM/FE Level 2 - Hourly');
+        break;
+    case '3':
+        g_form.addOption('u_labor_category', '12', 'EMT TO7: Direct Labor: Systems Architect Level 3 - Hourly');
+        g_form.addOption('u_labor_category', '13', 'EMT TO7: Direct Labor: Systems Architect Level 2 - Hourly');
+        break;
+    case '4':
+        g_form.addOption('u_labor_category', '14', 'EPS2: SME Level 4 - Hourly');
+        break;
+    case '5':
+        g_form.addOption('u_labor_category', '15', 'OCA: DECCS: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly');
+        g_form.addOption('u_labor_category', '16', 'OCA: DECCS: CLIN 302 Systems Analysis/Director OY3 - Hourly');
+        g_form.addOption('u_labor_category', '17', 'OCA: DRL: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly');
+        g_form.addOption('u_labor_category', '18', 'OCA: DRL: CLIN 302 Systems Analysis/Director OY3 - Hourly');
+        g_form.addOption('u_labor_category', '19', 'OCA: INL: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly');
+        break;
+    case '6':
+        g_form.addOption('u_labor_category', '20', 'ESITA TO9 Consultant - Sr IT Strategy - Hourly');
+        break;
+    case '7':
+        g_form.addOption('u_labor_category', '21', 'CSOS: OY1Ph2 Principal Engineer/Analyst - Hourly');
+        g_form.addOption('u_labor_category', '22', 'CSOS: OY1Ph2 Principal IT Analyst - Hourly');
+        g_form.addOption('u_labor_category', '23', 'CSOS: OY1Ph2 Senior Engineer/Analyst - Hourly');
+        g_form.addOption('u_labor_category', '24', 'CSOS: OY1Ph2 Sr SME - Hourly');
+        break;
+    case '8':
+        g_form.addOption('u_labor_category', '25', 'Brooklyn: Info Technology Specialist Sr - Hourly');
+        g_form.addOption('u_labor_category', '26', 'Brooklyn: Principal SME - Hourly');
+        g_form.addOption('u_labor_category', '27', 'Brooklyn: Sr Principal SME - Hourly');
+        break;
+    case '9':
+        g_form.addOption('u_labor_category', '28', 'G&A: Conf & Seminar Time - Hourly');
+        g_form.addOption('u_labor_category', '29', 'G&A: Training / Cert Time - Hourly');
+        break;
+    case '10':
+        g_form.addOption('u_labor_category', '30', 'OH - Hourly');
+        g_form.addOption('u_labor_category', '31', 'OH: Conf & Seminar Time - Hourly');
+        break;
+    default:
+		g_form.addOption('u_labor_category', '-1', '--None--');
+        break;
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>jackretcher</sys_created_by>
+        <sys_created_on>2018-06-25 17:38:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4d284de7dbf21300f8275385ca96196c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>APP_oCh_contract_code</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_script_client_4d284de7dbf21300f8275385ca96196c</sys_update_name>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-26 12:19:13</sys_updated_on>
+        <table>x_237286_training_records_needing_approval</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

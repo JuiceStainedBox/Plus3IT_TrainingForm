@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
     <sys_ui_section caption="" section_id="3ac3b41adb361300f8275385ca9619e6" sys_domain="global" table="x_237286_training_records_needing_approval" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>93d9adbfdb721300f8275385ca961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
+            <text>Warning: Updating the form but leaving the Approval Action to "Not Yet Processed" will progress the state from Open to Work in Progress. Updating the form after changing Approval Action to Accepted or Rejected will progress the state to closed and make this record read-only!</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>51e4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>5bd9adbfdb721300f8275385ca961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,125 +30,153 @@
             <element>.split</element>
             <position>1</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>d1e4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>dfd9adbfdb721300f8275385ca961929</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>priority</element>
+            <element>u_hr_state</element>
             <position>2</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>55e4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>53d9adbfdb721300f8275385ca96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>state</element>
-            <position>3</position>
-            <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>d5e4fc5adb361300f8275385ca961959</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
-            <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>59e4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>d3d9adbfdb721300f8275385ca96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>short_description</element>
-            <position>5</position>
+            <position>4</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>d9e4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>57d9adbfdb721300f8275385ca96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>description</element>
-            <position>6</position>
+            <position>5</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>5de4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>d7d9adbfdb721300f8275385ca96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>approval</element>
-            <position>7</position>
+            <element>u_contract_code</element>
+            <position>6</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>dde4fc5adb361300f8275385ca961959</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>5bd9adbfdb721300f8275385ca96192a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_labor_category</element>
+            <position>7</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>dbd9adbfdb721300f8275385ca96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>93d9adbfdb721300f8275385ca961929</element>
+            <position>8</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>5fd9adbfdb721300f8275385ca96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approval</element>
+            <position>9</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>dfd9adbfdb721300f8275385ca96192a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_approver</element>
-            <position>8</position>
+            <position>10</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>51e4fc5adb361300f8275385ca96195a</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>53d9adbfdb721300f8275385ca96192b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>work_notes</element>
-            <position>9</position>
+            <element>u_work_notes_comments</element>
+            <position>11</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 18:55:06</sys_created_on>
-            <sys_id>d1e4fc5adb361300f8275385ca96195a</sys_id>
+            <sys_created_on>2018-06-26 14:37:25</sys_created_on>
+            <sys_id>d3d9adbfdb721300f8275385ca96192b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_237286_training_records_needing_approval" sys_domain="global" view="Default view">3ac3b41adb361300f8275385ca9619e6</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 18:55:06</sys_updated_on>
+            <sys_updated_on>2018-06-26 14:37:25</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

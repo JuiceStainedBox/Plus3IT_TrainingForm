@@ -11,6 +11,18 @@
         <name>test</name>
         <order/>
         <script><![CDATA[function onLoad() {
+	var ga = GlideAjax('Test');
+	ga.addParam('sysparm_name', 'getEmployees');
+	ga.getXML(getEmployeesOutput);
+	
+}
+
+function getEmployeesOutput(response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	alert(answer);
+	var objJSON = JSON.parse(answer);
+	
+}
   /* $.ajax(url: "https://api.zenefits.com/core/people", 
 		 beforeSend: function(xhr) {
 	   xhr.setRequestHeader("Authorization", "bearer No6nGRBNTLWE/7A80Wpp");
@@ -25,14 +37,14 @@
 			   alert("failure");
 		   }
 		 );*/
-}]]></script>
+]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>ericsmith</sys_created_by>
         <sys_created_on>2018-06-22 17:04:28</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>06f4ade2dbf21300f8275385ca9619b0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>test</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -40,8 +52,8 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_06f4ade2dbf21300f8275385ca9619b0</sys_update_name>
         <sys_updated_by>ericsmith</sys_updated_by>
-        <sys_updated_on>2018-06-22 18:10:19</sys_updated_on>
-        <table>x_237286_training_test_user_table</table>
+        <sys_updated_on>2018-06-25 14:00:30</sys_updated_on>
+        <table>x_237286_training_training_reimbursement_records</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
         <view/>

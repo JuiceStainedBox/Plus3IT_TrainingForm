@@ -5,8 +5,84 @@
             <dependent_value/>
             <element>u_section_1_financial_assistance</element>
             <hint/>
-            <inactive>false</inactive>
-            <label>yes</label>
+            <inactive>true</inactive>
+            <label>I am (Post 9/11 GI Bill</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:48:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ab8729ebdb361300f8275385ca96199d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:51:10</sys_updated_on>
+            <value>I am (Post 9/11 GI Bill</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_assistance</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>I am NOT receiving financial assistance (Post 9/11 GI Bill</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:43:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>024661abdb361300f8275385ca961922</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:45:18</sys_updated_on>
+            <value>I am NOT receiving financial assistance (Post 9/11 GI Bill</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_assistance</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>I am receiving financial assistance (Post 9/11 GI Bill</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:47:12</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7727a1ebdb361300f8275385ca96191f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:48:13</sys_updated_on>
+            <value>I am receiving financial assistance (Post 9/11 GI Bill</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_assistance</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>n o</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:46:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e7f6edabdb361300f8275385ca961937</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:46:55</sys_updated_on>
+            <value>n o</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_assistance</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>I am receiving financial assistance (Post 9/11 GI Bill, VEAP, Grant, etc.)</label>
             <language>en</language>
             <name>x_237286_training_training_reimbursement_records</name>
             <sequence>0</sequence>
@@ -15,10 +91,29 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>0aa963cedb321300f8275385ca9619a4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-06-21 13:26:22</sys_updated_on>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:48:50</sys_updated_on>
             <value>yes</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_assistance</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>no</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>1</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:48:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae6765ebdb361300f8275385ca9619fc</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:51:10</sys_updated_on>
+            <value>0</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>u_section_1_financial_assistance</element>

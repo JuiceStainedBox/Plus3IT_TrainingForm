@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_section_1_financial_aid" table="x_237286_training_training_reimbursement_records" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_aid</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>I am receiving financial assistance (Post 9/11 GI Bill</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:53:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ec98a92fdb361300f8275385ca961955</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:53:16</sys_updated_on>
+            <value>I am receiving financial assistance (Post 9/11 GI Bill</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_financial_aid</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>I am not receiving financial assistance (Post 9/11 GI Bill</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>4</sequence>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:53:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6c98a92fdb361300f8275385ca961957</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:53:16</sys_updated_on>
+            <value>I am not receiving financial assistance (Post 9/11 GI Bill</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_section_1_financial_aid</element>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>justinpark</sys_created_by>
+            <sys_created_on>2018-06-25 19:53:16</sys_created_on>
+            <sys_id>2898a92fdb361300f8275385ca961957</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_section_1_financial_aid</sys_name>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_choice_x_237286_training_training_reimbursement_records_u_section_1_financial_aid</sys_update_name>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-06-25 19:53:16</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

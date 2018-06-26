@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>Modify sections 'course_#' based on 'u_section_1_course_number'.</description>
@@ -126,7 +126,7 @@ function setCoursesMandatory(num, b)
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>51a7e74edb321300f8275385ca96192f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>TRA_oCh_sec1_courseNumber</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -134,7 +134,7 @@ function setCoursesMandatory(num, b)
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_51a7e74edb321300f8275385ca96192f</sys_update_name>
         <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-21 15:37:07</sys_updated_on>
+        <sys_updated_on>2018-06-25 19:58:00</sys_updated_on>
         <table>x_237286_training_training_reimbursement_records</table>
         <type>onChange</type>
         <ui_type>0</ui_type>

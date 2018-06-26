@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="4" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="Approver" mandatory="true" max_length="200" name="u_approver" type="string"/>
+    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="1" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Approval Action" mandatory="true" max_length="40" name="u_approval" type="string">
+            <choice>
+                <element label="Not Yet Processed" sequence="0" value="noProcess"/>
+                <element label="Approved" sequence="1" value="approve"/>
+                <element label="Rejected" sequence="2" value="reject"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Approver" max_length="200" name="u_approver" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_2" type="string">
+            <choice>
+                <element label="Choice 1" sequence="0" value="Choice 1"/>
+                <element label="Choice 2" sequence="1" value="Choice 2"/>
+                <element label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="-1" label="Contract Code" mandatory="true" max_length="40" name="u_contract_code" type="string">
+            <choice>
+                <element label="--None--" sequence="0" value="-1"/>
+                <element label="Berico Technologies: EAADS" sequence="1" value="0"/>
+                <element label="BAH EMT: TO4" sequence="2" value="1"/>
+                <element label="BAH EMT: TO6" sequence="3" value="2"/>
+                <element label="BAH EMT: TO7" sequence="4" value="3"/>
+                <element label="BAH EPS" sequence="5" value="4"/>
+                <element label="Acuity" sequence="6" value="5"/>
+                <element label="ACS CDO TO9" sequence="7" value="6"/>
+                <element label="CSRA DOS CSOS" sequence="8" value="7"/>
+                <element label="ManTech International" sequence="9" value="8"/>
+                <element label="Non-Billable G&amp;A" sequence="10" value="9"/>
+                <element label="Non-Billable OH" sequence="11" value="10"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="0" label="State" max_length="40" name="u_hr_state" read_only="true" type="string">
+            <choice>
+                <element label="Open" sequence="0" value="0"/>
+                <element label="In Progress" sequence="1" value="1"/>
+                <element label="Closed" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="-1" label="Labor Category" mandatory="true" max_length="40" name="u_labor_category" type="string">
+            <choice>
+                <element label="--None--" sequence="0" value="-1"/>
+                <element label="EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Hourly" sequence="1" value="0"/>
+                <element label="EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Surge CLIN - Hourly" sequence="2" value="1"/>
+                <element label="EAADS:Direct Labor:Software Engineer Level 1 (Gr 3) Surge CLIN - Hourly" sequence="3" value="2"/>
+                <element label="EAADS:Direct Labor:Software Engineer Level 3 (Gr 3) - Hourly" sequence="4" value="3"/>
+                <element label="EAADS:Direct Labor:Software Engineer Level 3 (Gr 3) Surge CLIN - Hourly" sequence="5" value="4"/>
+                <element label="EAADS:Direct Labor:Software Engineer Level 2 (Gr3) Hourly" sequence="6" value="5"/>
+                <element label="EAADS:Direct Labor:Software Engineer Level 2 (Gr3) Surge CLIN - Hourly" sequence="7" value="6"/>
+                <element label="EAADS:Direct Labor:Software Engnr Level 4 (Gr7) Hourly" sequence="8" value="7"/>
+                <element label="EAADS:Direct Labor:Software Engnr Level 4 (Gr7) OY1 Surge CLIN - Hourly" sequence="9" value="8"/>
+                <element label="EMT TO4: Direct Labor: Sr Solution Architect - Hourly" sequence="10" value="9"/>
+                <element label="EMT TO4: Direct Labor: Sr Data Engineer - Hourly" sequence="11" value="10"/>
+                <element label="EMT TO6: Direct Labor: SM/FE Level 2 - Hourly" sequence="12" value="11"/>
+                <element label="EMT TO7: Direct Labor: Systems Architect Level 3 - Hourly" sequence="13" value="12"/>
+                <element label="EMT TO7: Direct Labor: Systems Architect Level 2 - Hourly" sequence="14" value="13"/>
+                <element label="EPS2: SME Level 4 - Hourly" sequence="15" value="14"/>
+                <element label="OCA: DECCS: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly" sequence="16" value="15"/>
+                <element label="OCA: DECCS: CLIN 302 Systems Analysis/Director OY3 - Hourly" sequence="17" value="16"/>
+                <element label="OCA: DRL: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly" sequence="18" value="17"/>
+                <element label="OCA: DRL: CLIN 302 Systems Analysis/Director OY3 - Hourly" sequence="19" value="18"/>
+                <element label="OCA: INL: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly" sequence="20" value="19"/>
+                <element label="ESITA TO9 Consultant - Sr IT Strategy - Hourly" sequence="21" value="20"/>
+                <element label="CSOS: OY1Ph2 Principal Engineer/Analyst - Hourly" sequence="22" value="21"/>
+                <element label="CSOS: OY1Ph2 Principal IT Analyst - Hourly" sequence="23" value="22"/>
+                <element label="CSOS: OY1Ph2 Senior Engineer/Analyst - Hourly" sequence="24" value="23"/>
+                <element label="CSOS: OY1Ph2 Sr SME - Hourly" sequence="25" value="24"/>
+                <element label="Brooklyn: Info Technology Specialist Sr - Hourly" sequence="26" value="25"/>
+                <element label="Brooklyn: Principal SME - Hourly" sequence="27" value="26"/>
+                <element label="Brooklyn: Sr Principal SME - Hourly" sequence="28" value="27"/>
+                <element label="G&amp;A: Conf &amp; Seminar Time - Hourly" sequence="29" value="28"/>
+                <element label="G&amp;A: Training / Cert Time - Hourly" sequence="30" value="29"/>
+                <element label="OH - Hourly" sequence="31" value="30"/>
+                <element label="OH: Conf &amp; Seminar Time - Hourly" sequence="32" value="31"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="0" label="State" max_length="40" name="u_section_1_hr_state" type="string">
+            <choice>
+                <element label="Open" sequence="0" value="0"/>
+                <element label="Work in Progress" sequence="1" value="1"/>
+                <element label="Closed" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes / Comments" max_length="2000" name="u_worknotes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Work Notes / Comments" max_length="2000" name="u_work_notes_comments" type="string"/>
     </element>
 </database>
