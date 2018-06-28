@@ -10,7 +10,7 @@
         <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Course II Comments/ Charge Code</column_label>
+        <column_label>Course III Comments</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -30,11 +30,11 @@
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>200</max_length>
+        <max_length>2000</max_length>
         <name>x_237286_training_training_reimbursement_records</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -50,14 +50,14 @@
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-21 14:38:48</sys_created_on>
         <sys_id>4f3ab38adb721300f8275385ca9619f2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Course II Comments/ Charge Code</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Course III Comments</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_dictionary_x_237286_training_training_reimbursement_records_u_course_3_code</sys_update_name>
-        <sys_updated_by>ryanma</sys_updated_by>
-        <sys_updated_on>2018-06-21 14:38:48</sys_updated_on>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-28 13:44:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

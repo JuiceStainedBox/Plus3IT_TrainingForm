@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="1" type="collection">
+    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="10" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Approval Action" mandatory="true" max_length="40" name="u_approval" type="string">
             <choice>
                 <element label="Not Yet Processed" sequence="0" value="noProcess"/>
@@ -9,6 +9,7 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="Approver" max_length="200" name="u_approver" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Taxi/Uber Cost" max_length="40" name="u_car_cost" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_2" type="string">
             <choice>
                 <element label="Choice 1" sequence="0" value="Choice 1"/>
@@ -32,6 +33,42 @@
                 <element label="Non-Billable OH" sequence="11" value="10"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Contract Code" max_length="40" name="u_contract_code_2" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Course I Approval" mandatory="true" max_length="40" name="u_course_1_approval" type="string">
+            <choice>
+                <element label="Not Yet Processed" sequence="0" value="noProcess"/>
+                <element label="Approved" sequence="1" value="approve"/>
+                <element label="Rejected" sequence="2" value="reject"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Course I Comments" max_length="1600" name="u_course_1_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Course II Approval" mandatory="true" max_length="40" name="u_course_2_approval" type="string">
+            <choice>
+                <element label="Not Yet Processed" sequence="0" value="noProcess"/>
+                <element label="Approved" sequence="1" value="approve"/>
+                <element label="Rejected" sequence="2" value="reject"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Course II Comments" max_length="1600" name="u_course_2_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Course III Approval" mandatory="true" max_length="40" name="u_course_3_approval" type="string">
+            <choice>
+                <element label="Not Yet Processed" sequence="0" value="noProcess"/>
+                <element label="Approved" sequence="1" value="approve"/>
+                <element label="Rejected" sequence="2" value="reject"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Course III Comments" max_length="1600" name="u_course_3_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Course III" max_length="40" name="u_course_iii_approval" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Course III Comments" max_length="1600" name="u_course_iii_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Course II" max_length="40" name="u_course_ii_approval" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Course II Comments" max_length="1600" name="u_course_ii_comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Course I" max_length="40" name="u_course_i_approval" type="string">
+            <choice/>
+        </element>
         <element attributes="edge_encryption_enabled=true" choice="3" default="0" label="State" max_length="40" name="u_hr_state" read_only="true" type="string">
             <choice>
                 <element label="Open" sequence="0" value="0"/>
@@ -39,6 +76,7 @@
                 <element label="Closed" sequence="2" value="2"/>
             </choice>
         </element>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Reimbursement" mandatory="true" max_length="20" name="u_immediate_reimbursement" type="price"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="-1" label="Labor Category" mandatory="true" max_length="40" name="u_labor_category" type="string">
             <choice>
                 <element label="--None--" sequence="0" value="-1"/>
@@ -76,6 +114,9 @@
                 <element label="OH: Conf &amp; Seminar Time - Hourly" sequence="32" value="31"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Labor Category" max_length="40" name="u_labor_category_2" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Original Record Number" max_length="40" name="u_original_record_number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Per Diem Cost" max_length="40" name="u_per_diem_cost" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="0" label="State" max_length="40" name="u_section_1_hr_state" type="string">
             <choice>
                 <element label="Open" sequence="0" value="0"/>
@@ -83,6 +124,7 @@
                 <element label="Closed" sequence="2" value="2"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Section Number" max_length="40" name="u_section_number" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes / Comments" max_length="2000" name="u_worknotes" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Work Notes / Comments" max_length="2000" name="u_work_notes_comments" type="string"/>
     </element>

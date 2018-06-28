@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_course_3_approval" table="x_237286_training_records_needing_approval" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Accepted</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>0</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:24:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7a60ba00db831300f8275385ca9619a5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-28 12:59:35</sys_updated_on>
+            <value>accept</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Choice 1</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>0</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:23:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>23303a00db831300f8275385ca9619dd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:24:08</sys_updated_on>
+            <value>Choice 1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not Yet Processed</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>0</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:24:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>be60ba00db831300f8275385ca9619a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:24:08</sys_updated_on>
+            <value>noProcess</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Approved</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>1</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-28 12:59:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>39a6eb1cdb031300f8275385ca9619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-28 12:59:35</sys_updated_on>
+            <value>approve</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Choice 2</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>1</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:23:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>af303a00db831300f8275385ca9619de</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:24:08</sys_updated_on>
+            <value>Choice 2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>Choice 3</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>2</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:23:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6b303a00db831300f8275385ca9619e0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:24:08</sys_updated_on>
+            <value>Choice 3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_course_3_approval</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Rejected</label>
+            <language>en</language>
+            <name>x_237286_training_records_needing_approval</name>
+            <sequence>2</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:24:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3660ba00db831300f8275385ca9619a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:24:08</sys_updated_on>
+            <value>reject</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_course_3_approval</element>
+            <name>x_237286_training_records_needing_approval</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:23:22</sys_created_on>
+            <sys_id>6b303a00db831300f8275385ca9619de</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_course_3_approval</sys_name>
+            <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+            <sys_update_name>sys_choice_x_237286_training_records_needing_approval_u_course_3_approval</sys_update_name>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:23:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>test</description>
+        <field>active</field>
+        <global>true</global>
+        <messages/>
+        <name>APP_oS</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	
+	//Type appropriate comment here, and begin script below
+	
+	var approval = g_form.getValue('u_approval').toString();
+	
+	if( g_form.getValue('number').substring(0,4) == "APP1" ){
+		if( approval === "approve" ){
+			return confirm("You are updating approval action to approved.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+		}
+		
+		else if( approval === "reject" ){
+			return confirm("You are updating approval action to rejected.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+		}
+		
+		else
+			return confirm("You have not updated approval action.\nYour selections in contract code, labor category, and work notes will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");
+	}
+	
+	else{
+		var temp = g_form.getValue('description');
+		var count = (temp.match(/Course Title/g) || []).length;
+		
+		var allApprove = true;
+			
+		if( count > 0 && g_form.getValue('u_course_1_approval') == "noProcess") allApprove = false;
+		--count;
+			
+		if( count > 0 && g_form.getValue('u_course_2_approval') == "noProcess") allApprove = false;
+		--count;
+			
+		if( count > 0 && g_form.getValue('u_course_3_approval') == "noProcess") allApprove = false;
+		
+		if( allApprove == true){
+			return confirm("You are updating every approval action.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+		}
+		
+		else{
+			return confirm("You have not updated every approval action.\nYour selections will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>jackretcher</sys_created_by>
+        <sys_created_on>2018-06-27 11:41:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1af9c240db031300f8275385ca961952</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>APP_oS</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_script_client_1af9c240db031300f8275385ca961952</sys_update_name>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-28 14:16:02</sys_updated_on>
+        <table>x_237286_training_records_needing_approval</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

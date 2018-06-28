@@ -4,126 +4,126 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_course_1_approval</element>
             <position>0</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>ff3a378adb721300f8275385ca96191a</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>b71c628cdb431300f8275385ca961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_course_1_code</element>
             <position>1</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>733a378adb721300f8275385ca96191b</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>3b1c628cdb431300f8275385ca961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_course_2_approval</element>
             <position>2</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>f33a378adb721300f8275385ca96191b</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>bb1c628cdb431300f8275385ca961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_course_2_code</element>
             <position>3</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>773a378adb721300f8275385ca96191b</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>3f1c628cdb431300f8275385ca961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_course_3_approval</element>
             <position>4</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>f73a378adb721300f8275385ca96191b</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>bf1c628cdb431300f8275385ca961986</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_course_3_code</element>
             <position>5</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>7b3a378adb721300f8275385ca96191b</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>331c628cdb431300f8275385ca961987</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_amount_reimbursed</element>
             <position>6</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>fb3a378adb721300f8275385ca96191b</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>b31c628cdb431300f8275385ca961987</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_date_received</element>
-            <position>7</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>7f3a378adb721300f8275385ca96191b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_hr_signature_2</element>
-            <position>8</position>
-            <sys_created_by>ryanma</sys_created_by>
-            <sys_created_on>2018-06-21 14:38:52</sys_created_on>
-            <sys_id>ff3a378adb721300f8275385ca96191b</sys_id>
+            <position>7</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>371c628cdb431300f8275385ca961987</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 14:38:52</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_date_received</element>
+            <position>8</position>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-27 14:05:22</sys_created_on>
+            <sys_id>b71c628cdb431300f8275385ca961987</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="HR Signature [Section 2]" display_value="HR Signature [Section 2]" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">fa3a338adb721300f8275385ca9619a5</sys_ui_section>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-06-27 14:05:22</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

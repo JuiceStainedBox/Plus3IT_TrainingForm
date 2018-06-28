@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="1" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="Total Amount Reimbursed" max_length="40" name="u_amount_reimbursed" type="string"/>
+    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="6" type="collection">
+        <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Total Amount Reimbursed" max_length="40" name="u_amount_reimbursed" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Current Form State" max_length="200" name="u_cf_state" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Labor Category" mandatory="true" max_length="40" name="u_choice_10" type="string">
             <choice>
                 <element label="EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Hourly" sequence="0" value="0"/>
@@ -38,22 +39,23 @@
                 <element label="OH: Conf &amp; Seminar Time - Hourly" sequence="31" value="31"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="Course I Approval" max_length="40" name="u_course_1_approval" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Course I Comments/ Charge Code" max_length="200" name="u_course_1_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Course I Approval" max_length="40" name="u_course_1_approval" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Course I Comments" max_length="2000" name="u_course_1_code" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true" label="Estimated Cost" mandatory="true" max_length="20" name="u_course_1_cost" type="currency"/>
         <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_course_1_currency" type="currency"/>
-        <element attributes="edge_encryption_enabled=true" label="Course II Approval" max_length="40" name="u_course_2_approval" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Course II Comments/ Charge Code" max_length="200" name="u_course_2_code" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Course III Approval" max_length="40" name="u_course_3_approval" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Course II Comments/ Charge Code" max_length="200" name="u_course_3_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Course II Approval" max_length="40" name="u_course_2_approval" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Course II Comments" max_length="2000" name="u_course_2_code" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Course III Approval" max_length="40" name="u_course_3_approval" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Course III Comments" max_length="2000" name="u_course_3_code" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_currency_2" type="currency"/>
         <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_currency_5" type="currency"/>
-        <element label="Date Received" max_length="40" name="u_date_received" type="glide_date"/>
+        <element label="Date Received" max_length="40" name="u_date_received" read_only="true" type="glide_date"/>
         <element label="Date Submitted" max_length="40" name="u_employee_date_submitted" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="I consent that typing my full legal name here constitutes a legal signature" max_length="200" name="u_employee_signature_2" type="string"/>
         <element label="New Date" max_length="40" name="u_glide_date_14" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true" label="I consent that typing my full legal name here constitutes a legal signature" max_length="200" name="u_hr_signature_2" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Signature" max_length="200" name="u_hr_signature_2" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="New Price" max_length="20" name="u_price_15" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Total Reimbursement Requested" max_length="20" name="u_reimbursement_requested" type="price"/>
         <element attributes="edge_encryption_enabled=true" label="Total Reimbursement Requested" max_length="30" name="u_reimbursemen_requested" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Approval Action" max_length="40" name="u_section_1_approval" read_only="true" type="string">
             <choice>
@@ -62,6 +64,7 @@
                 <element label="Rejected" sequence="2" value="reject"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Approval Action" max_length="200" name="u_section_1_approval_action" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Taxi/Uber Costs" max_length="20" name="u_section_1_car_cost" read_only="true" type="price"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Contract Code" mandatory="true" max_length="40" name="u_section_1_contract_code" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="--None--" label="Contract Code" max_length="100" name="u_section_1_contract_code_string" read_only="true" type="string"/>
@@ -133,6 +136,7 @@
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Flight Cost" max_length="20" name="u_section_1_flight_cost" read_only="true" type="price"/>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Hotel Cost" max_length="20" name="u_section_1_hotel_cost" read_only="true" type="price"/>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Immediate Amount Reimbursed" mandatory="true" max_length="20" name="u_section_1_immediate_reimbursed" type="price"/>
+        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Immediate Reimbursement" max_length="40" name="u_section_1_immediate_reimbursement_string" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="--None--" label="Labor Category" max_length="100" name="u_section_1_labor_category_string" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="If Other" max_length="40" name="u_section_1_other" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="free" label="Method of Payment" max_length="40" name="u_section_1_payment_method" read_only="true" type="string">
@@ -181,6 +185,8 @@
                 <element label="Closed No Reimbursement" sequence="7" value="6"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_state_cf" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Current Form State" max_length="200" name="u_state_current_form" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_13" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_3" type="string"/>
     </element>

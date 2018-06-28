@@ -10,33 +10,44 @@
         <script><![CDATA[var TEST_syncZenefits = Class.create();
 TEST_syncZenefits.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	//initialize :function(){},
-	syncZenefits :function(){
-    try { 
-
-	 var r = new sn_ws.RESTMessageV2('x_237286_training.Zenefits Users', 'Default GET');
-	 r.setStringParameter('tiers', '1,2,3');	 
-	 var response = r.execute();
-	 var responseBody = response.getBody();
-	 var httpStatus = response.getStatusCode();
-		return responseBody;
-	}
-	catch(ex) {
-	 var message = ex.getMessage();
-	}
-},
-	//type :'TEST_syncZenefits'
-});]]></script>
+		syncZenefits :function(){
+			
+			try {
+				
+				var r = new sn_ws.RESTMessageV2('x_237286_training.Zenefits Users', 'Default GET');
+				r.setRequestHeader("Authorization","Bearer No6nGRBNTLWE/7A8OWpp");
+				
+				var response = r.execute();
+				var jsonString = JSON.stringify(response.getBody());
+				//gs.info('Message Response...' + jsonString);
+				gs.info('Message Response...' + response.getBody());
+				//return jsonString;
+				return response.getBody();
+			}
+			
+			catch(ex) {
+				var message = ex.getMessage();
+				gs.info("CATCH");
+				gs.info("Message is: " + message);
+				return message;
+			}
+			
+		
+	},
+		
+		type :'TEST_syncZenefits'
+	});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-26 13:54:13</sys_created_on>
         <sys_id>cbbe51b7db721300f8275385ca96194c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>TEST_syncZenefits</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_include_cbbe51b7db721300f8275385ca96194c</sys_update_name>
         <sys_updated_by>ryanma</sys_updated_by>
-        <sys_updated_on>2018-06-26 14:48:26</sys_updated_on>
+        <sys_updated_on>2018-06-28 14:32:06</sys_updated_on>
     </sys_script_include>
 </record_update>

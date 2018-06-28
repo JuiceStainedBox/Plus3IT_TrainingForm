@@ -15,14 +15,15 @@ Syncs Zenefits userbase and creates user in ServiceNow based on the user data re
         <script><![CDATA[function onLoad() {
 	 	var ga = new GlideAjax('TEST_syncZenefits');
 	ga.addParam('sysparm_name', 'syncZenefits');
-	ga.getXMLWait();
 	ga.getXML(CallBack);
-	alert(ga);
 	
 	function CallBack(response) {
 	var answer = response.responseXML.documentElement.getAttribute("answer");
 		answer = JSON.parse(answer);
 		alert('answer:' + answer);
+	    alert(GlideAjax('TEST_syncZenefits'));
+		//alert("ga");
+		alert("ga is here" + ga);
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -31,7 +32,7 @@ Syncs Zenefits userbase and creates user in ServiceNow based on the user data re
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b5fc09f7db321300f8275385ca96198c</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>onLoad_SyncZenefits</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -39,7 +40,7 @@ Syncs Zenefits userbase and creates user in ServiceNow based on the user data re
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_b5fc09f7db321300f8275385ca96198c</sys_update_name>
         <sys_updated_by>ryanma</sys_updated_by>
-        <sys_updated_on>2018-06-26 15:40:16</sys_updated_on>
+        <sys_updated_on>2018-06-28 14:04:58</sys_updated_on>
         <table>x_237286_training_training_reimbursement_records</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_portal_page" unload_date="2018-06-26 15:41:22">
+<record_update node_type="sys_portal_page" unload_date="2018-06-28 15:16:34">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout/>
         <order/>
@@ -40,7 +40,7 @@
                     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
                         <grid_canvas display_value="PA New Tab">c36a0c5adbb21300f8275385ca9619ec</grid_canvas>
                         <height>14</height>
-                        <portal_widget display_value="Created 2018-06-21 10:08:04">696c1096dbf21300f8275385ca961905</portal_widget>
+                        <portal_widget display_value="Created 2018-06-21 13:08:04">696c1096dbf21300f8275385ca961905</portal_widget>
                         <posx>0</posx>
                         <posy>0</posy>
                         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
@@ -61,7 +61,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-06-21 10:08:04">696c1096dbf21300f8275385ca961905</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:08:04">696c1096dbf21300f8275385ca961905</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:08:04</sys_created_on>
                         <sys_id>656c1096dbf21300f8275385ca961906</sys_id>
@@ -72,7 +72,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-06-21 10:08:04">696c1096dbf21300f8275385ca961905</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:08:04">696c1096dbf21300f8275385ca961905</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:08:04</sys_created_on>
                         <sys_id>6d6c1096dbf21300f8275385ca961905</sys_id>
@@ -83,7 +83,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-06-21 10:08:04">696c1096dbf21300f8275385ca961905</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:08:04">696c1096dbf21300f8275385ca961905</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:08:04</sys_created_on>
                         <sys_id>a16c1096dbf21300f8275385ca961906</sys_id>
@@ -94,7 +94,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>type</name>
-                        <portal_section display_value="Created 2018-06-21 10:08:04">696c1096dbf21300f8275385ca961905</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:08:04">696c1096dbf21300f8275385ca961905</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:08:04</sys_created_on>
                         <sys_id>e96c1096dbf21300f8275385ca961906</sys_id>
@@ -120,7 +120,7 @@
                     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
                         <grid_canvas display_value="PA New Tab">c36a0c5adbb21300f8275385ca9619ec</grid_canvas>
                         <height>10</height>
-                        <portal_widget display_value="Created 2018-06-21 10:13:19">da9d98d6dbf21300f8275385ca961967</portal_widget>
+                        <portal_widget display_value="Created 2018-06-21 13:13:19">da9d98d6dbf21300f8275385ca961967</portal_widget>
                         <posx>0</posx>
                         <posy>14</posy>
                         <sys_class_name>sys_grid_canvas_pane</sys_class_name>
@@ -141,7 +141,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-06-21 10:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:13:19</sys_created_on>
                         <sys_id>169d98d6dbf21300f8275385ca961968</sys_id>
@@ -152,7 +152,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>type</name>
-                        <portal_section display_value="Created 2018-06-21 10:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:13:19</sys_created_on>
                         <sys_id>5e9d98d6dbf21300f8275385ca961968</sys_id>
@@ -163,7 +163,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-06-21 10:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:13:19</sys_created_on>
                         <sys_id>d69d98d6dbf21300f8275385ca961968</sys_id>
@@ -174,7 +174,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-06-21 10:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
+                        <portal_section display_value="Created 2018-06-21 13:13:19">da9d98d6dbf21300f8275385ca961967</portal_section>
                         <sys_created_by>ryanma</sys_created_by>
                         <sys_created_on>2018-06-21 17:13:19</sys_created_on>
                         <sys_id>de9d98d6dbf21300f8275385ca961967</sys_id>

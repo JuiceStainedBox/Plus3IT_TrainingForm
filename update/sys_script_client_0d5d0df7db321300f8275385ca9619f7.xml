@@ -4,20 +4,68 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description>Makes all fields read-only if state == 3</description>
+        <description>changes form based on workflow progression (i.e. number)</description>
         <field>active</field>
         <global>true</global>
         <messages/>
         <name>APP_oL</name>
         <order/>
         <script><![CDATA[function onLoad() {
-   //Type appropriate comment here, and begin script below
+	//Type appropriate comment here, and begin script below
 	
-	if( g_form.getValue('u_hr_state').toString() == "Closed"){
+	//first task
+	if( g_form.getValue('number').substring(0,4) == "APP1"){
+		
+		g_form.setSectionDisplay("course_approval", false);
+		
+		if( g_form.getValue('u_hr_state').toString() == "Closed"){
+			g_form.setReadOnly('u_contract_code', true);
+			g_form.setReadOnly('u_labor_category', true);
+			g_form.setReadOnly('u_approval', true);
+			g_form.setReadOnly('u_work_notes_comments', true);
+			g_form.setReadOnly('u_immediate_reimbursement', true);
+		}
+	}
+	
+	//second task
+	else{
+		
+		g_form.setSectionDisplay("course_approval", true);
+		g_form.setDisplay('u_course_2_approval', false);
+		g_form.setDisplay('u_course_3_approval', false);
+		g_form.setDisplay('u_course_2_comments', false);
+		g_form.setDisplay('u_course_3_comments', false);
+		g_form.setDisplay('u_approval', false);
+		
+		var temp = g_form.getValue('description');
+		var count = (temp.match(/Course Title/g) || []).length;
+		
+		if( count == 2 ){
+			g_form.setDisplay('u_course_2_approval', true);
+			g_form.setDisplay('u_course_2_comments', true);
+		} 
+		
+		else if( count == 3 ){
+			g_form.setDisplay('u_course_2_approval', true);
+			g_form.setDisplay('u_course_2_comments', true);
+			g_form.setDisplay('u_course_3_approval', true);
+			g_form.setDisplay('u_course_3_comments', true);
+		}
+		
+		
 		g_form.setReadOnly('u_contract_code', true);
 		g_form.setReadOnly('u_labor_category', true);
-		g_form.setReadOnly('u_approval', true);
-		g_form.setReadOnly('u_work_notes_comments', true);
+		
+		if( g_form.getValue('u_hr_state').toString() == "Closed"){
+			g_form.setReadOnly('u_course_1_approval', true);
+			g_form.setReadOnly('u_course_2_approval', true);
+			g_form.setReadOnly('u_course_3_approval', true);
+			g_form.setReadOnly('u_course_1_comments', true);
+			g_form.setReadOnly('u_course_2_comments', true);
+			g_form.setReadOnly('u_course_3_comments', true);
+			g_form.setReadOnly('u_work_notes_comments', true);
+			g_form.setReadOnly('u_immediate_reimbursement', true);
+		}
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -26,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0d5d0df7db321300f8275385ca9619f7</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>APP_oL</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -34,7 +82,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_0d5d0df7db321300f8275385ca9619f7</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-06-26 13:44:14</sys_updated_on>
+        <sys_updated_on>2018-06-28 13:59:36</sys_updated_on>
         <table>x_237286_training_records_needing_approval</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

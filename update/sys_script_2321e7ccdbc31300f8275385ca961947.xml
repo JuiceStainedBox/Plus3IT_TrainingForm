@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection/>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name/>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+
+})(current, previous);
+
+/*
+function displayContractCode( str ){
+	switch(str){
+		case "-1": return "--None--";
+		case "0": return "Berico Technologies: EAADS";
+		case "1": return "BAH EMT: TO4";
+		case "2": return "BAH EMT: TO6";
+		case "3": return "BAH EMT: TO7";
+		case "4": return "BAH EPS";
+		case "5": return "Acuity";
+		case "6": return "ACS CDO TO9";
+		case "7": return "CSRA DOS CSOS";
+		case "8": return "ManTech International";
+		case "9": return "Non-Billable G&A";
+		case "10": return "Non-Billable OH";
+	}
+}
+
+function displayLaborCategory( str ){
+	switch(str){
+		case "-1": return "--None--";
+		case "0": return "EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Hourly";
+		case "1": return "EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Surge CLIN - Hourly";
+		case "2": return "EAADS:Direct Labor:Software Engineer Level 1 (Gr 3) Surge CLIN - Hourly";
+		case "3": return "EAADS:Direct Labor:Software Engineer Level 3 (Gr 3) - Hourly";
+		case "4": return "EAADS:Direct Labor:Software Engineer Level 3 (Gr 3) Surge CLIN - Hourly";
+		case "5": return "EAADS:Direct Labor:Software Engineer Level 2 (Gr3) Hourly";
+		case "6": return "EAADS:Direct Labor:Software Engineer Level 2 (Gr3) Surge CLIN - Hourly";
+		case "7": return "EAADS:Direct Labor:Software Engnr Level 4 (Gr7) Hourly";
+		case "8": return "EAADS:Direct Labor:Software Engnr Level 4 (Gr7) OY1 Surge CLIN - Hourly";
+		case "9": return "EMT TO4: Direct Labor: Sr Solution Architect - Hourly";
+		case "10": return "EMT TO4: Direct Labor: Sr Data Engineer - Hourly";
+		case "11": return "EMT TO6: Direct Labor: SM/FE Level 2 - Hourly";
+		case "12": return "EMT TO7: Direct Labor: Systems Architect Level 3 - Hourly";
+		case "13": return "EMT TO7: Direct Labor: Systems Architect Level 2 - Hourly";
+		case "14": return "EPS2: SME Level 4 - Hourly";
+		case "15": return "OCA: DECCS: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly";
+		case "16": return "OCA: DECCS: CLIN 302 Systems Analysis/Director OY3 - Hourly";
+		case "17": return "OCA: DRL: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly";
+		case "18": return "OCA: DRL: CLIN 302 Systems Analysis/Director OY3 - Hourly";
+		case "19": return "OCA: INL: CLIN 301 IT Subj Matter Spec. OY 3 - Hourly";
+		case "20": return "ESITA TO9 Consultant - Sr IT Strategy - Hourly";
+		case "21": return "CSOS: OY1Ph2 Principal Engineer/Analyst - Hourly";
+		case "22": return "CSOS: OY1Ph2 Principal IT Analyst - Hourly";
+		case "23": return "CSOS: OY1Ph2 Senior Engineer/Analyst - Hourly";
+		case "24": return "CSOS: OY1Ph2 Sr SME - Hourly";
+		case "25": return "Brooklyn: Info Technology Specialist Sr - Hourly";
+		case "26": return "Brooklyn: Principal SME - Hourly";
+		case "27": return "Brooklyn: Sr Principal SME - Hourly";
+		case "28": return "G&A: Conf & Seminar Time - Hourly";
+		case "29": return "G&A: Training / Cert Time - Hourly";
+		case "30": return "OH - Hourly";
+		case "31": return "OH: Conf & Seminar Time - Hourly";
+	}
+}
+
+function formatCost( strO ){
+	return strO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+	*/
+	(function executeRule(current, previous /*null when async*/) {
+		
+		current.u_hr_state = "2";
+		current.u_hr_state
+		/*
+		//get table
+		var db = new GlideRecord('x_237286_training_training_reimbursement_records');
+		
+		//filter for records
+		db.addQuery('number', current.u_original_record_number);
+		
+		//get records
+		db.query();
+		
+		if( current.number.substring(0,4) == "APP1" ){
+			
+			var approval = current.u_approval.toString();
+			
+			if( approval === "noProcess") {
+				
+				current.u_hr_state = "Work in Progress";
+				current.u_approver = current.sys_updated_by + " (in progress)";
+			}
+			else if( approval === "approve" || approval === "reject" ){
+				current.u_hr_state = "Closed";
+				current.u_approver = current.sys_updated_by;
+				
+				while( db.next() ){
+					
+					db.u_section_1_contract_code_string =
+					displayContractCode( current.u_contract_code.toString() );
+					db.u_section_1_labor_category_string =
+					displayLaborCategory( current.u_labor_category.toString() );
+					db.u_section_1_immediate_reimbursement_string =
+					"$" + formatCost( current.u_immediate_reimbursement );
+					
+					if( approval === "approve")
+						db.u_section_1_approval_action = "Approved";
+					else
+						db.u_section_1_approval_action = "Rejected";
+					
+					db.u_section_1_signature_signed_hr = current.sys_updated_by;
+					db.u_section_1_signature_date_hr = current.sys_updated_on;
+					
+					db.u_state_current_form = "HR Approval I";
+					
+					db.update();
+				}
+			}
+		}
+		
+		else{
+			while( db.next() ){
+				current.u_hr_state = "Closed";
+				var course1App = current.u_course_1_approval;
+				
+				if( course1App === "accept" )
+					db.u_course_1_approval = "Accepted";
+				else
+					db.u_course_1_approval = "Rejected";
+				
+				db.u_course_1_code = current.u_contract_code + "\n" + current.u_labor_category + "\n" + current.u_course_1_comments;
+				
+				db.u_hr_signature_2 = current.sys_updated_by;
+				db.u_date_recieved = current.sys_updated_on;
+				
+				db.u_state_current_form = "HR Approval II";
+				
+				db.update();
+			}
+		} */
+	})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>jackretcher</sys_created_by>
+        <sys_created_on>2018-06-27 18:48:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2321e7ccdbc31300f8275385ca961947</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_script_2321e7ccdbc31300f8275385ca961947</sys_update_name>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-27 18:48:27</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=2321e7ccdbc31300f8275385ca961947"/>
+</record_update>

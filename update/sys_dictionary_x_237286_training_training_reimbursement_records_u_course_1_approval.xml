@@ -13,7 +13,7 @@
         <column_label>Course I Approval</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>Not Yet Processed</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -34,7 +34,7 @@
         <name>x_237286_training_training_reimbursement_records</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -50,14 +50,14 @@
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-21 14:38:48</sys_created_on>
         <sys_id>363ab38adb721300f8275385ca9619de</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Course I Approval</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_dictionary_x_237286_training_training_reimbursement_records_u_course_1_approval</sys_update_name>
-        <sys_updated_by>ryanma</sys_updated_by>
-        <sys_updated_on>2018-06-21 14:38:48</sys_updated_on>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-27 14:05:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
