@@ -3,17 +3,15 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_237286_training.TRA_hideVars</api_name>
+        <api_name>x_237286_training.TRA_getVars</api_name>
         <client_callable>true</client_callable>
-        <description>hide variables onLoad for 'Tuition and Training Reimbursement Form'</description>
-        <name>TRA_hideVars</name>
-        <script><![CDATA[var TRA_hideVars = Class.create();
-TRA_hideVars.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-	hideVars :function(){
+        <description>get variables onLoad for 'Tuition and Training Reimbursement Form'</description>
+        <name>TRA_getVars</name>
+        <script><![CDATA[var TRA_getVars = Class.create();
+TRA_getVars.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getVars :function(){
 		// return array that holds item variables
 		var obj = [];
-		var section = this.getParameter('sysparm_section_num');
-		obj.push(section);
 		//get catalog item variables
 		var gr = new GlideRecord('item_option_new');
 		var cat_sys_id = this.getParameter('sysparm_cat_sys_id');
@@ -24,14 +22,9 @@ TRA_hideVars.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		while(gr.next()){
 			obj.push(gr.name.toString());
 		}
-		var i = 0;
-		while(i < obj.length){
-			var print = i + ' is ' + obj[i];
-			gs.info(print);
-			i += 1;
-		}
+		
 		//encode catalog items and send JSON
-		var data = new JSON().encode(obj); //JSON formatted string
+		var data = JSON.stringify(obj);
 		return data;
 	}
 });]]></script>
@@ -39,13 +32,13 @@ TRA_hideVars.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>justinpark</sys_created_by>
         <sys_created_on>2018-06-22 18:36:38</sys_created_on>
         <sys_id>a92a7da6db361300f8275385ca9619a0</sys_id>
-        <sys_mod_count>39</sys_mod_count>
-        <sys_name>TRA_hideVars</sys_name>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>TRA_getVars</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_include_a92a7da6db361300f8275385ca9619a0</sys_update_name>
         <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-28 14:49:28</sys_updated_on>
+        <sys_updated_on>2018-06-28 17:33:01</sys_updated_on>
     </sys_script_include>
 </record_update>

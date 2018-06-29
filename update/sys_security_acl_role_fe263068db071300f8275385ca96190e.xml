@@ -3,17 +3,17 @@
     <sys_security_acl_role action="INSERT_OR_UPDATE">
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>ericsmith</sys_created_by>
-        <sys_created_on>2018-06-27 11:58:31</sys_created_on>
-        <sys_id>e6fe06c4db031300f8275385ca9619d5</sys_id>
+        <sys_created_on>2018-06-28 18:47:11</sys_created_on>
+        <sys_id>fe263068db071300f8275385ca96190e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>.x_237286_training.security_admin</sys_name>
+        <sys_name>x_237286_training_training_reimbursement_records.*.x_237286_training.security_admin</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
-        <sys_security_acl display_value="x_237286_training_records_needing_approval.*">ae8e06c4db031300f8275385ca9619ce</sys_security_acl>
-        <sys_update_name>sys_security_acl_role_e6fe06c4db031300f8275385ca9619d5</sys_update_name>
+        <sys_security_acl display_value="x_237286_training_training_reimbursement_records.*">7d95b4e4db071300f8275385ca96193c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_fe263068db071300f8275385ca96190e</sys_update_name>
         <sys_updated_by>ericsmith</sys_updated_by>
-        <sys_updated_on>2018-06-27 11:58:31</sys_updated_on>
+        <sys_updated_on>2018-06-28 18:47:11</sys_updated_on>
         <sys_user_role display_value="x_237286_training.security_admin" name="x_237286_training.security_admin">bb86a70edb321300f8275385ca96190d</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>

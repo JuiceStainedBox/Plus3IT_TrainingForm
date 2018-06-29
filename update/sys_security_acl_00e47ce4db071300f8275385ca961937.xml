@@ -3,24 +3,24 @@
     <sys_security_acl action="INSERT_OR_UPDATE">
         <active>true</active>
         <admin_overrides>true</admin_overrides>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <condition/>
-        <description>Only HR and security admin can create HR tasks records</description>
-        <name>x_237286_training_records_needing_approval.*</name>
-        <operation display_value="create">create</operation>
-        <script/>
+        <description/>
+        <name>x_237286_training_training_reimbursement_records</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[gs.setProperty('glide.sm.default_mode') = 'allow';]]></script>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>ericsmith</sys_created_by>
-        <sys_created_on>2018-06-26 12:41:12</sys_created_on>
-        <sys_id>adfe01bbdb321300f8275385ca96196a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>x_237286_training_records_needing_approval.*</sys_name>
+        <sys_created_on>2018-06-28 18:44:22</sys_created_on>
+        <sys_id>00e47ce4db071300f8275385ca961937</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_237286_training_training_reimbursement_records</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
-        <sys_update_name>sys_security_acl_adfe01bbdb321300f8275385ca96196a</sys_update_name>
+        <sys_update_name>sys_security_acl_00e47ce4db071300f8275385ca961937</sys_update_name>
         <sys_updated_by>ericsmith</sys_updated_by>
-        <sys_updated_on>2018-06-26 17:50:53</sys_updated_on>
+        <sys_updated_on>2018-06-28 18:44:22</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

@@ -15,59 +15,23 @@
         <field/>
         <global>true</global>
         <messages/>
-        <name>TRA_oL_sec1</name>
+        <name>TRA_oS_sec1</name>
         <order/>
-        <script><![CDATA[function onLoad() {
-	g_form.addInfoMessage("line2");
-	var ga = new GlideAjax('TRA_hideVars');
-	g_form.addInfoMessage("line4");
-	ga.addParam('sysparm_name','hideVars');
-	g_form.addInfoMessage("line6");
-	ga.addParam('sysparm_section_num', "2");
-	g_form.addInfoMessage("line8");
+        <script><![CDATA[function onSubmit() {
+   var ga = new GlideAjax('TRA_getVars');
+	ga.addParam('sysparm_name','getVars');
 	ga.addParam('sysparm_cat_sys_id', g_form.getUniqueValue());
-	g_form.addInfoMessage("line10");
 	ga.getXML(hideSection);
-	g_form.addInfoMessage("line12");
-}
-// The callback function for returning server-side code
-function hideSection(serverResponse) {
-	g_form.addInfoMessage("line16");
-	var answer = serverResponse.responseXML.documentElement.getAttribute("answer");
-	g_form.addInfoMessage("line18");
-	answer = JSON.parse(answer);
-	g_form.addInfoMessage("line20");
-	var section_num = answer[0];
-	g_form.addInfoMessage("line22");
-	
-	var i = 0;
-	while (i < (answer.length)) {
-		g_form.addInfoMessage(answer[i]);
-		i = i + 1;
-	}
-	if(section_num == 1){
-		//debugging info message
-		g_form.addInfoMessage('Hide section 1');
-		//hide vars
-		i = 1;
+	function hideSection(serverResponse) {
+		var answer = serverResponse.responseXML.documentElement.getAttribute('answer');
+		answer = JSON.parse(answer);
+		
+		var i = 0;
 		while (i < (answer.length)) {
-			g_form.setDisplay(answer[i],false);
+			g_form.addInfoMessage(g_form.getValue(answer[i]));
 			i = i + 1;
 		}
-	}
-	else if (section_num == 2){
-		//debugging error message
-		g_form.addInfoMessage('Hide section 2');
-		//hide vars
-		i = 1;
-		while (i < (answer.length)) {
-			g_form.setDisplay(answer[i],false);
-			i = i + 1;
-		}
-	}
-	else{
-		//error message
-		g_form.addInfoMessage('not possible case');
+		
 	}
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -76,17 +40,17 @@ function hideSection(serverResponse) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8508106bdb721300f8275385ca9619d5</sys_id>
-        <sys_mod_count>48</sys_mod_count>
-        <sys_name>TRA_oL_sec1</sys_name>
+        <sys_mod_count>67</sys_mod_count>
+        <sys_name>TRA_oS_sec1</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_8508106bdb721300f8275385ca9619d5</sys_update_name>
         <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-28 12:23:14</sys_updated_on>
+        <sys_updated_on>2018-06-28 17:34:41</sys_updated_on>
         <table/>
-        <type>onLoad</type>
+        <type>onSubmit</type>
         <ui_type>10</ui_type>
         <variable_set/>
         <view/>
