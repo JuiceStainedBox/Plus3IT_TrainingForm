@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_237286_training.financial" name="x_237286_training.financial">eef01db9db071300f8275385ca961925</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>jackretcher</sys_created_by>
+        <sys_created_on>2018-07-02 17:57:12</sys_created_on>
+        <sys_id>682191b9db071300f8275385ca9619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>eef01db9db071300f8275385ca961925</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_embedded_help_role_682191b9db071300f8275385ca9619cc</sys_update_name>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-07-02 17:57:12</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

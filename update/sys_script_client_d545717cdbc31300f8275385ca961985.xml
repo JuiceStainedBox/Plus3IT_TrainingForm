@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_section_1_course_3_cost</field>
+        <global>true</global>
+        <messages/>
+        <name>TRA_oCh_sec1_course3</name>
+        <order/>
+        <script><![CDATA[/*
+	function - gets each estimated cost field for all 5 courses, adds them, and sets the 
+	total estimated course cost
+	control    - the DHTML widget whose value changed.
+	oldValue   - the value the widget had when the record was loaded.
+	newValue   -  the value the widget has after the change.
+	isLoading  - identifies whether the change occurs as part of a form load.
+	isTemplate - identifies whether the change occurs as part of a template load.
+*/
+
+/*
+	function - gets each estimated cost field for all 3 courses, adds them, and sets the 
+	total estimated course cost; integer math used to avoid accuracy problems caused by 
+	floating point numbers
+	control    - the DHTML widget whose value changed.
+	oldValue   - the value the widget had when the record was loaded.
+	newValue   -  the value the widget has after the change.
+	isLoading  - identifies whether the change occurs as part of a form load.
+	isTemplate - identifies whether the change occurs as part of a template load.
+*/
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	
+	//exits function if function is called as part of a form load or has no newValue
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	var newCourse1 = g_form.getDecimalValue('u_section_1_course_1_cost') * 100;
+	var newCourse2 = g_form.getDecimalValue('u_section_1_course_2_cost') * 100; 
+	var newCourse3 = g_form.getDecimalValue('u_section_1_course_3_cost') * 100;
+
+	var newTotalCentInt = newCourse1 + newCourse2 + newCourse3; 
+	
+	var principal =  ~~( newTotalCentInt / 100 );
+	var cents = newTotalCentInt % 100;
+	
+	var totalString = principal + "." + cents;
+	
+	//regex below adds commas for every three digits for better readability
+	var newEstimatedTotalString = "$" + totalString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");	
+
+	g_form.setValue('u_section_1_course_cost', newEstimatedTotalString);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>jackretcher</sys_created_by>
+        <sys_created_on>2018-06-29 18:01:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d545717cdbc31300f8275385ca961985</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>TRA_oCh_sec1_course3</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_script_client_d545717cdbc31300f8275385ca961985</sys_update_name>
+        <sys_updated_by>jackretcher</sys_updated_by>
+        <sys_updated_on>2018-06-29 19:32:49</sys_updated_on>
+        <table>x_237286_training_training_reimbursement_records</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

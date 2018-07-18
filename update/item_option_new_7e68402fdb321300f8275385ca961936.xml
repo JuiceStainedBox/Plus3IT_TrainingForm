@@ -3,7 +3,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="[Section 1] Tuition and Training Reimbursement Request Form">6caae012db361300f8275385ca9619f6</cat_item>
+        <cat_item display_value="[Section 1] Training Reimbursement TEST ITEM">6caae012db361300f8275385ca9619f6</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -38,7 +38,7 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_section_1_car_cost</name>
-        <order>515</order>
+        <order>520</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>Estimated Taxi/Uber Cost</question_text>
@@ -60,14 +60,14 @@
         <sys_created_by>justinpark</sys_created_by>
         <sys_created_on>2018-06-25 12:53:33</sys_created_on>
         <sys_id>7e68402fdb321300f8275385ca961936</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Estimated Taxi/Uber Cost</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>item_option_new_7e68402fdb321300f8275385ca961936</sys_update_name>
         <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-25 13:52:31</sys_updated_on>
+        <sys_updated_on>2018-06-29 11:47:59</sys_updated_on>
         <table/>
         <tooltip/>
         <type>6</type>

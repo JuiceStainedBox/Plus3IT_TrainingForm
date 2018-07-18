@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_dictionary_override">
     <sys_dictionary_override action="INSERT_OR_UPDATE">
-        <attributes/>
-        <attributes_override>false</attributes_override>
+        <attributes>close_states=6;7;8</attributes>
+        <attributes_override>true</attributes_override>
         <base_table>task</base_table>
         <calculation/>
         <calculation_override>false</calculation_override>
@@ -23,13 +23,13 @@
         <sys_created_by>jackretcher</sys_created_by>
         <sys_created_on>2018-06-21 18:55:05</sys_created_on>
         <sys_id>0de4fc5adb361300f8275385ca96191f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>state</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_dictionary_override_0de4fc5adb361300f8275385ca96191f</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-06-25 20:00:49</sys_updated_on>
+        <sys_updated_on>2018-07-02 15:36:31</sys_updated_on>
     </sys_dictionary_override>
 </record_update>

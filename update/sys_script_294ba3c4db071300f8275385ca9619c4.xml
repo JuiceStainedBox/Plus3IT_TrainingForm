@@ -28,14 +28,26 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[/*
-@function() - the choice object that allows HR to select the correct contract
-code operates with both a display value and backend value; when attempting to return the
-variable that HR selected (the display value), the object would return the backend value
-instead even when the toString() and getDisplayValue() functions were used; in order to
-get the display value, this switch case takes that backend value and pairs it with its
-display value; if a function is found that returns the display value instead, be sure
-to use it and get rid of this switchcase
+        <script><![CDATA[//-------- Constants ---------------
+
+var TASK_OPEN = 1;
+var TASK_IN_PROGRESS = 2;
+var TASK_CLOSED = 3;
+
+var DB_AWAIT_FIN_1 = 10;
+var DB_AWAIT_FIN_2 = 15;
+
+var DB_FIN_APPROVE_1 = 11;
+var DB_FIN_APPROVE_2 = 16;
+
+
+
+//-------- Helper Functions ----------------
+
+
+
+/*
+@function() - shows display value for corresponding backend value
 @str - toString() variable returned by the choice object; corresponds with a distinct display
 variable that HR selected orginially
 @return - the display value that HR originally selected
@@ -58,13 +70,7 @@ function displayContractCode( str ){
 }
 
 /*
-@function() - the choice object that allows HR to select the correct labor category
-operates with both a display value and backend value; when attempting to return the
-variable that HR selected (the display value), the object would return the backend value
-instead even when the toString() and getDisplayValue() functions were used; in order to
-get the display value, this switch case takes that backend value and pairs it with its
-display value; if a function is found that returns the display value instead, be sure
-to use it and get rid of this switchcase
+@function() - shows display value for corresponding backend value
 @str - toString() variable returned by the choice object; corresponds with a distinct display
 variable that HR selected orginially
 @return - the display value that HR originally selected
@@ -108,50 +114,85 @@ function displayLaborCategory( str ){
 }
 
 /*
+@function - checks to see if financial/HR task has been reopened in workflow
+@return - boolean for reset check 
+*/
+function isReopen(){
+	
+	var reset = true;
+	
+	if( current.state != TASK_OPEN )
+		reset = false;
+	
+	else if( current.u_approval != "noProcess" )
+		reset = false;
+	
+	else if( current.u_approver != "" )
+		reset = false;
+	
+	else if( current.u_work_notes_comments != "" )
+		reset = false;
+	
+	return reset;
+	
+}
+
+/*
 @function() - creates a glide record that first points to the master db
 table and then queries the original record that triggered the workflow
 @return - gliderecord is returned; this will be used to update the fields
 in the original record as HR updates their task form; see updateOrigRecordSec1()
 for more info
- 	*/
+ */
 function createDatabase(){
 	
 	//get table
 	var db = new GlideRecord('x_237286_training_training_reimbursement_records');
 	
-	//filter for records
-	db.addQuery('number', current.u_original_record_number);
-	
-	//get records
-	db.query();
-	
-	//prime record
-	db.next();
+	//get single record
+	db.get('number', current.u_original_record_number);
 	
 	return db;
 }
 
 /*
-@function() - responsible for changing the state of HR's form based
-on their approval response; if approved or rejected, this function calls
-updateOrigRecordSec1() to update the original record in the master db
+@function() - takes in string object from multiple price fields and returns a string
+formatted with commas in a periodicity of 3; for example, if a price field returns
+	123456.78, this function turns it into 123,456.78; NOTE: this function does not place
+a '$' in front
+@strO - string object of price field
+@return - formatted string of numbers using commas with periodicity of 3
+ */
+function formatCost( strO ){ return strO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+
+
+
+//------------ HR Functions --------------
+
+
+
+/*
+@function() - control logic for when hr task 1 gets updated
 @current - this is the form/task that HR filled out and submitted
 @db - @db - this is the master db containing the original record to be updated;
 see createDatabase() for master db creation
  */
 function firstTaskProgression(current, db){
 	
+	if( isReopen() )
+		return;
+	
 	var approval = current.u_approval.toString();
 	
 	if( approval === "noProcess") {
 		
-		current.u_hr_state = "Work in Progress";
+		current.state = TASK_IN_PROGRESS;
 		current.u_approver = current.sys_updated_by + " (in progress)";
 	}
 	
 	//executes when approved or rejected
 	else {
-		current.u_hr_state = "Closed";
+		current.state = TASK_CLOSED;
 		current.u_approver = current.sys_updated_by;
 		
 		updateOrigRecordSec1(current, db, approval);
@@ -159,8 +200,7 @@ function firstTaskProgression(current, db){
 }
 
 /*
-@function() - after HR updates their first task form, this function takes relevant
-information and updates the original record in the master db with them
+@function() - updates the original record in the master db after hr task1 update
 @current - this is the form/task that HR filled out and submitted
 @db - this is the master db containing the original record to be updated;
 see createDatabase() for master db creation
@@ -182,19 +222,123 @@ function updateOrigRecordSec1( current, db, approval ){
 	
 	db.u_section_1_signature_signed_hr = current.sys_updated_by;
 	db.u_section_1_signature_date_hr = current.sys_updated_on;
+	db.u_hr_notes = current.u_work_notes_comments;
 	
-	db.u_state_current_form = "HR Approval I";
+	db.state = DB_AWAIT_FIN_1; 
 	
 	db.update();
 }
 
 /*
-@function() - after HR updates their second task form, this function may be
-called; unlike updateOrigRecordSec2Course2Approval() and updateOrigRecordSec2Course3Approval(),
-this function does not rely on a masterCount variable; this is because it is assumed that if a
-user wants secondary reimbursement, then there is at least one thing they want reimbursed; due to
-this, this is where HR would designate their approval/rejection; SPECIFICALLY, this function writes
-HR's approval/rejection to the original record in the master db
+@function() - control logic for when hr task 2 is updated
+@current - this is the form/task that HR filled out and submitted
+@db - this is the master db containing the original record to be updated;
+see createDatabase() for master db creation
+ */
+function secondTaskProgression(current, db){
+	
+	if( isReopenHR2() )
+		return;
+	
+	var temp = current.description;
+	var masterCount = (temp.match(/Course Title/g) || []).length;
+	var count = masterCount;
+	
+	var allApprove = true;
+	
+	if( count > 0 && current.u_course_1_approval == "noProcess") allApprove = false;
+		--count;
+	
+	if( count > 0 && current.u_course_2_approval == "noProcess") allApprove = false;
+		--count;
+	
+	if( count > 0 && current.u_course_3_approval == "noProcess") allApprove = false;
+		
+	//first task
+	if( allApprove == false){
+		current.state = TASK_IN_PROGRESS;
+		current.u_approver = current.sys_updated_by + " (in progress)";
+	}
+	
+	//second task
+	else{
+		current.state = TASK_CLOSED;
+		current.u_approver = current.sys_updated_by;
+		
+		updateOrigRecordSec2( current, db, masterCount );
+	}
+}
+
+/*
+@function - checks to see if hr task has been recently reset
+@return - boolean for reset check 
+*/
+function isReopenHR2(){
+	
+	var reset = true;
+	
+	if( current.state != TASK_OPEN )
+		reset = false;
+	
+	else if( current.u_course_1_approval != "noProcess" )
+		reset = false;
+	
+	else if( current.u_course_2_approval != "noProcess" )
+		reset = false;
+	
+	else if( current.u_course_3_approval != "noProcess" )
+		reset = false;
+	
+	else if( current.u_approver != "" )
+		reset = false;
+	
+	else if( current.u_course_1_comments != "" )
+		reset = false;
+	
+	else if( current.u_course_2_comments != "" )
+		reset = false;
+	
+	else if( current.u_course_3_comments != "" )
+		reset = false;
+	
+	return reset;
+}
+
+/*
+@function() - updates the original record in the master db after task2 update
+@current - this is the form/task that HR filled out and submitted
+@db - this is the master db containing the original record to be updated;
+see createDatabase() for master db creation
+@masterCount - masterCount is an integer that was used to count each substring of "Course Title"
+in the HR form's description string and serves to count how many courses the user wanted approved
+ */
+function updateOrigRecordSec2( current, db, masterCount ){
+	
+	db.u_amount_reimbursed =
+	"$" + formatCost( current.u_immediate_reimbursement );
+	
+	updateOrigRecordSec2Course1Approval(current, db);
+	--masterCount;
+	
+	updateOrigRecordSec2Course2Approval(current, db, masterCount);
+	--masterCount;
+	
+	updateOrigRecordSec2Course3Approval(current, db, masterCount);
+	
+	db.u_course_1_code = current.u_course_1_comments;
+	db.u_course_2_code = current.u_course_2_comments;
+	db.u_course_3_code = current.u_course_3_comments;
+	
+	db.u_hr_signature_2 = current.sys_updated_by;
+	db.u_date_received = current.sys_updated_on;
+	
+	db.state = DB_AWAIT_FIN_2;
+	
+	db.update();
+}
+
+/*
+@function() - writes HR's approval/rejection to the original record in the master db
 @current - this is the form/task that HR filled out and submitted
 @db - this is the master db containing the original record to be updated;
 see createDatabase() for master db creation
@@ -208,18 +352,12 @@ function updateOrigRecordSec2Course1Approval(current, db){
 }
 
 /*
-@function() - after HR updates their second task form, this function may be
-called; using masterCount, this function looks to see if HR had to approve or
-reject a second course besides the first mandatory one and updates the original record
-in the master db accordingly; if course 2 was hidden from HR view (meaning the user only
-wanted approval for one course), this function will send N/A back to the originial record
-to document this (this is because the default value for u_course_2_approval is noProcess)
+@function() - writes HR's approval/rejection to the original record in the master db
 @current - this is the form/task that HR filled out and submitted
 @db - this is the master db containing the original record to be updated;
 see createDatabase() for master db creation
 @masterCount - masterCount is an integer that was used to count each substring of "Course Title"
 in the HR form's description string and serves to count how many courses the user wanted approved
-see ____ the working implementation of this and how it works
  */
 function updateOrigRecordSec2Course2Approval(current, db, masterCount){
 	
@@ -232,19 +370,12 @@ function updateOrigRecordSec2Course2Approval(current, db, masterCount){
 }
 
 /*
-@function() - similar to updateOrigRecordSec2Course2Approval(); after HR updates their second task form,
-this function may be called; using masterCount, this function looks to see if HR had to approve or
-reject a third course besides the first mandatory one and updates the original record
-in the master db accordingly; if course 3 was hidden from HR view (meaning the user only
-wanted approval for either one course or two courses), this function will send N/A back to
-the originial record to document this (this is because the default value for u_course_3_approval
-is noProcess)
+@function() - writes HR's approval/rejection to the original record in the master db
 @current - this is the form/task that HR filled out and submitted
 @db - this is the master db containing the original record to be updated;
 see createDatabase() for master db creation
 @masterCount - masterCount is an integer that was used to count each substring of "Course Title"
 in the HR form's description string and serves to count how many courses the user wanted approved
-see ____ the working implementation of this and how it works
  */
 function updateOrigRecordSec2Course3Approval(current, db, masterCount){
 	
@@ -256,105 +387,142 @@ function updateOrigRecordSec2Course3Approval(current, db, masterCount){
 		db.u_course_3_approval = "N/A";
 }
 
+
+
+//----------- Financial Functions --------------
+
+
+
 /*
-@function() - after HR updates their second task form, this function takes relevant
-information and updates the original record in the master db with them
+@function - control logic when financial task 1 is updated
 @current - this is the form/task that HR filled out and submitted
 @db - this is the master db containing the original record to be updated;
 see createDatabase() for master db creation
-@masterCount - masterCount is an integer that was used to count each substring of "Course Title"
-in the HR form's description string and serves to count how many courses the user wanted approved
-see ____ the working implementation of this and how it works
 */
-function updateOrigRecordSec2( current, db, masterCount ){
-	db.u_amount_reimbursed =
-	"$" + formatCost( current.u_immediate_reimbursement );
+function fin1Progression(current, db){
 	
-	updateOrigRecordSec2Course1Approval(current, db);
+	var approval = current.u_approval.toString();
 	
-	--masterCount;
+	if( isReopen() )
+		return;
 	
-	updateOrigRecordSec2Course2Approval(current, db, masterCount);
+	if( approval === "noProcess" ) {
+		
+		current.state = TASK_IN_PROGRESS;
+		current.u_approver = current.sys_updated_by + " (in progress)";
+	}
 	
-	--masterCount;
+	//executes when approved or rejected
+	else {
+		current.state = TASK_CLOSED;
+		current.u_approver = current.sys_updated_by;
+		
+		updateOrigRecordFin1( current, db);
+	}
+}
+
+/*
+@function - progresses master db state; all other fields are mainly hidden
+@current - this is the form/task that HR filled out and submitted
+@db - this is the master db containing the original record to be updated;
+see createDatabase() for master db creation
+*/
+function updateOrigRecordFin1( current, db){
 	
-	updateOrigRecordSec2Course3Approval(current, db, masterCount);
+	db.state = DB_FIN_APPROVE_1;
+	db.u_financial_notes = current.u_work_notes_comments;
 	
-	db.u_course_1_code = current.u_course_1_comments;
-	db.u_course_2_code = current.u_course_2_comments;
-	db.u_course_3_code = current.u_course_3_comments;
+	if( current.u_approval.toString() === "approve")
+		db.u_financial_approval = "Approved";
+	else
+		db.u_financial_approval = "Rejected";
 	
-	db.u_hr_signature_2 = current.sys_updated_by;
-	db.u_date_received = current.sys_updated_on;
+	db.update();
+}
+
+/*
+@function - control logic when financial task 1 is updated
+@current - this is the form/task that HR filled out and submitted
+@db - this is the master db containing the original record to be updated;
+see createDatabase() for master db creation
+*/
+function fin2Progression(current, db){
 	
-	db.u_state_current_form = "HR Approval II";
+	if( isReopen() )
+		return;
+	
+	var approval = current.u_approval.toString();
+	
+	if( approval === "noProcess" ) {
+		
+		current.state = TASK_IN_PROGRESS;
+		current.u_approver = current.sys_updated_by + " (in progress)";
+	}
+	
+	else {
+		current.state = TASK_CLOSED;
+		current.u_approver = current.sys_updated_by;
+		
+		updateOrigRecordFin2( current, db);
+	}
+}
+
+/*
+@function - progresses master db state; all other fields are mainly hidden from user
+@current - this is the form/task that HR filled out and submitted
+@db - this is the master db containing the original record to be updated;
+see createDatabase() for master db creation
+*/
+function updateOrigRecordFin2( current, db){
+	
+	db.state = DB_FIN_APPROVE_2; 
+	db.u_financial_notes = current.u_work_notes_comments;
+	
+	if( current.u_approval.toString() === "approve")
+		db.u_financial_approval = "Approved";
+	else
+		db.u_financial_approval = "Rejected";
 	
 	db.update();
 }
 
 
 
+//--------- MAIN FUNCTION -----------
+
+
+	
 /*
-@function() - takes in string object from multiple price fields and returns a string
-formatted with commas in a periodicity of 3; for example, if a price field returns
-	123456.78, this function turns it into 123,456.78; NOTE: this function does not place
-a '$' in front
-@strO - string object of price field
-@return - formatted string of numbers using commas with periodicity of 3
- */
-function formatCost( strO ){ return strO.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+@function() - this is the main function
+@current - this is the form/task that HR filled out and submitted
+@previous - the state of the form/task before HR updated it
+*/
+(function executeRule(current, previous /*null when async*/) {
 	
+	var db = createDatabase();
+		
+	//this if executes for first section task
+	if( current.number.substring(0,3) === "HR1" )
+		firstTaskProgression(current, db);
+		
+	else if( current.number.substring(0,3) === "FN1" )
+		fin1Progression(current, db);
+		
+	//executes for section II
+	else if( current.number.substring(0,3) === "HR2" )
+		secondTaskProgression(current, db );
 	
-	(function executeRule(current, previous /*null when async*/) {
-		
-		var db = createDatabase();
-		
-		//this if executes for first section task
-		if( current.number.substring(0,4) == "APP1" )
-			firstTaskProgression(current, db);
-		
-		
-		//executes for section II
-		else{
+	else if( current.number.substring(0,3) === "FN2")
+		fin2Progression(current, db);
 			
-			var temp = current.description;
-			var masterCount = (temp.match(/Course Title/g) || []).length;
-			var count = masterCount;
-			
-			var allApprove = true;
-			
-			if( count > 0 && current.u_course_1_approval == "noProcess") allApprove = false;
-				--count;
-			
-			if( count > 0 && current.u_course_2_approval == "noProcess") allApprove = false;
-				--count;
-			
-			if( count > 0 && current.u_course_3_approval == "noProcess") allApprove = false;
-				
-			//first task
-			if( allApprove == false){
-				current.u_hr_state = "Work in Progress";
-				current.u_approver = current.sys_updated_by + " (in progress)";
-			}
-			
-			//second task
-			else{
-				current.u_hr_state = "Closed";
-				current.u_approver = current.sys_updated_by;
-				
-				updateOrigRecordSec2( current, db, masterCount );
-				
-			}
-			
-		}
-	})(current, previous);]]></script>
+})(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>jackretcher</sys_created_by>
         <sys_created_on>2018-06-27 18:44:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>294ba3c4db071300f8275385ca9619c4</sys_id>
-        <sys_mod_count>53</sys_mod_count>
+        <sys_mod_count>108</sys_mod_count>
         <sys_name>APP_onUpdate</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -362,7 +530,7 @@ function formatCost( strO ){ return strO.toString().replace(/\B(?=(\d{3})+(?!\d)
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_294ba3c4db071300f8275385ca9619c4</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-06-28 19:13:06</sys_updated_on>
+        <sys_updated_on>2018-07-12 15:14:49</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

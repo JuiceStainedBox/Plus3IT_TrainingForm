@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sc_cat_item">
     <sc_cat_item action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <availability>on_both</availability>
         <billable>false</billable>
         <category display_value="Training">6f75301edb361300f8275385ca961911</category>
@@ -24,7 +24,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>[Section 2] Tuition and Training Reimbursement Request Form</name>
+        <name>[Section 2] Training Reimbursement TEST ITEM</name>
         <no_cart>false</no_cart>
         <no_order>false</no_order>
         <no_order_now>false</no_order_now>
@@ -50,14 +50,14 @@
         <sys_created_by>justinpark</sys_created_by>
         <sys_created_on>2018-06-26 17:18:34</sys_created_on>
         <sys_id>8cce02bbdbf21300f8275385ca961985</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>[Section 2] Tuition and Training Reimbursement Request Form</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>[Section 2] Training Reimbursement TEST ITEM</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sc_cat_item_8cce02bbdbf21300f8275385ca961985</sys_update_name>
         <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-27 19:01:23</sys_updated_on>
+        <sys_updated_on>2018-07-02 12:01:54</sys_updated_on>
         <template/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>

@@ -10,47 +10,82 @@
         <messages/>
         <name>APP_oS</name>
         <order/>
-        <script><![CDATA[function onSubmit() {
-	
-	//Type appropriate comment here, and begin script below
-	
+        <script><![CDATA[/*
+@function - different messages for HR informing them what happens
+when task 1 is updated
+ */
+function HR1Confirmation(){
 	var approval = g_form.getValue('u_approval').toString();
 	
-	if( g_form.getValue('number').substring(0,4) == "APP1" ){
-		if( approval === "approve" ){
-			return confirm("You are updating approval action to approved.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
-		}
-		
-		else if( approval === "reject" ){
-			return confirm("You are updating approval action to rejected.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
-		}
-		
-		else
-			return confirm("You have not updated approval action.\nYour selections in contract code, labor category, and work notes will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");
+	if( approval === "approve" ){
+		return confirm("You are updating approval action to approved.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
 	}
 	
-	else{
-		var temp = g_form.getValue('description');
-		var count = (temp.match(/Course Title/g) || []).length;
-		
-		var allApprove = true;
-			
-		if( count > 0 && g_form.getValue('u_course_1_approval') == "noProcess") allApprove = false;
+	else if( approval === "reject" )
+		return confirm("You are updating approval action to rejected.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+	
+	else
+		return confirm("You have not updated approval action.\nYour selections in contract code, labor category, and work notes will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");	
+}
+
+function finConfirmation(){
+	var approval = g_form.getValue('u_approval').toString();
+	
+	if( approval === "approve" )
+		return confirm("You are updating approval action to approved.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+	
+	else if( approval === "reject" )
+		return confirm("You are updating approval action to rejected.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+	
+	else
+		return confirm("You have not updated approval action.\nWork notes will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");
+}
+
+/*
+@function - different messages for HR informing them what happens
+when task 2 is updated
+ */
+function HR2Confirmation(){
+	var temp = g_form.getValue('description');
+	var count = (temp.match(/Course Title/g) || []).length;
+	
+	var allApprove = true;
+	
+	if( count > 0 && g_form.getValue('u_course_1_approval') == "noProcess") allApprove = false;
 		--count;
-			
-		if( count > 0 && g_form.getValue('u_course_2_approval') == "noProcess") allApprove = false;
+	
+	if( count > 0 && g_form.getValue('u_course_2_approval') == "noProcess") allApprove = false;
 		--count;
-			
-		if( count > 0 && g_form.getValue('u_course_3_approval') == "noProcess") allApprove = false;
+	
+	if( count > 0 && g_form.getValue('u_course_3_approval') == "noProcess") allApprove = false;
 		
-		if( allApprove == true){
-			return confirm("You are updating every approval action.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
-		}
-		
-		else{
-			return confirm("You have not updated every approval action.\nYour selections will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");
-		}
-	}
+	if( allApprove == true)
+		return confirm("You are updating every approval action.\nDoing so will close the record and make it read-only.\nDo you really want to save this record?");
+	
+	else
+		return confirm("You have not updated every approval action.\nYour selections will be saved and this task state will change to \"Work in Progress\".\nYou may finish this task at a later date.\nDo you really want to save this record?");
+}
+
+/*
+@function() - main function
+ */
+function onSubmit() {
+	
+	//hr task 1
+	if( g_form.getValue('number').substring(0,3) === "HR1" )
+		return HR1Confirmation();
+	
+	//fn task 1
+	else if( g_form.getValue('number').substring(0,3) === "FN1" )
+		return finConfirmation();
+	
+	//hr task 2
+	else if( g_form.getValue('number').substring(0,3) === "HR2" )
+		return HR2Confirmation();
+	
+	//fn task 2
+	else if( g_form.getValue('number').substring(0,3) === "FN2" )
+		return finConfirmation();
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>jackretcher</sys_created_by>
@@ -58,7 +93,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1af9c240db031300f8275385ca961952</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>59</sys_mod_count>
         <sys_name>APP_oS</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -66,7 +101,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_1af9c240db031300f8275385ca961952</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-06-28 14:16:02</sys_updated_on>
+        <sys_updated_on>2018-07-13 12:21:08</sys_updated_on>
         <table>x_237286_training_records_needing_approval</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

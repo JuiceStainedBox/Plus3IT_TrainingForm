@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sc_cat_item_category">
     <sc_cat_item_category action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="[Section 1] Tuition and Training Reimbursement Request Form">6caae012db361300f8275385ca9619f6</sc_cat_item>
+        <sc_cat_item display_value="[Section 1] Training Reimbursement TEST ITEM">6caae012db361300f8275385ca9619f6</sc_cat_item>
         <sc_category display_value="Training">6f75301edb361300f8275385ca961911</sc_category>
         <sys_class_name>sc_cat_item_category</sys_class_name>
         <sys_created_by>justinpark</sys_created_by>

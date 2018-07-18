@@ -12,35 +12,198 @@ TEST_syncZenefits.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
 	syncZenefits :function(){
 		try {
 			var r = new sn_ws.RESTMessageV2('x_237286_training.Zenefits Users', 'Default GET');
-			r.setRequestHeader("Authorization","Bearer No6nGRBNTLWE/7A8OWpp");
+			//r.setRequestHeader("Authorization","Bearer No6nGRBNTLWE/7A8OWpp");
 			
 			var response = r.execute();
 			var jsonString = response.getBody();
 			
 			var parsedResponse = JSON.parse(jsonString);
-			gs.info('parsedResponse...\n' + JSON.stringify(parsedResponse.data.data));
+			var userDB = [];
+			//var userData = parsedResponse.data.data;
 			
-			return jsonString;
+			//Acquire each user values
+			for (i = 0; i < parsedResponse.data.data.length; i++) {
+				
+				var userInfo = parsedResponse.data.data[i];
+				//gs.info('userData...\n' + i + '\n' + JSON.stringify(parsedResponse.data.data[i]));
+				gs.info('userInfo...\n' + userInfo);
+				var first = userInfo.first_name.JSON.stringify;
+				var middle = userInfo.middle_name.JSON.stringify;
+				var last = userInfo.last_name.JSON.stringify;
+				var mail = userInfo.personal_email.JSON.stringify;
+				var userData = [first, middle, last, mail];
+				userDB[i] = JSON.stringify(userData);
+			}
+			//gs.info('userDB...\n' + userDB);
+			
+			for (i = 0; i < parsedResponse.data.data.length; i++) {
+				
+				var tempUser = userDB[i];
+				//gs.info('tempUser...\n' + tempUser);
+				
+				//Duplicate help
+				var firstName = tempUser[0];//.toString();
+				var middleName = tempUser[1];//.toString();
+				var lastName = tempUser[2];//.toString();
+				var firstMiddle = firstName + middleName;
+				var user_ref;
+				var MAX_ATTEMPT = 1000;
+				var username;
+				
+				var possibleMatches = findPossibleMatches(firstName, lastName);
+				var validName = false;
+				
+				if (middleName == "null") {
+					middleName = "";
+				}
+				
+				for (var j = 1; j <= firstMiddle.length; j++) {
+					//set base username/ email
+					//gs.info('username firstMiddle...\n' + firstMiddle + '\n' + 'username lastName...\n' + lastName);
+					username = firstMiddle.toString().toLowerCase().substring(0, j) + '.' + lastName.toString().toLowerCase();
+					var email = tempUser[3];
+					
+					if (!usernameExists(username, email, possibleMatches)) {
+						
+						validName = true;
+						user_ref = createUser(firstName, middleName, lastName, email, username);
+						break;
+					}
+				}
+				//i = 0;
+				if (!validName) {
+					for (var i = 1; i < MAX_ATTEMPT; i++) {
+						
+						var usernameNr = username + i;
+						var emails = tempUser[3];
+						
+						if (!usernameExists(usernameNR, emails, possibleMatches)) {
+							user_ref = createUser(firstName, middleName, lastName, emails, usernameNr);
+							
+							break;
+						}
+					}
+				}
+			}
+			
+			//gs.info('parsedResponse...\n' + JSON.stringify(parsedResponse.data.data));
+			
+			return userDB;
 		}
 		catch(ex) {
 			var message = ex.getMessage();
 			gs.info("CATCH");
 			return message.getBody();
 		}
+		
 	},
 	type :'TEST_syncZenefits'
-});]]></script>
+});
+
+function usernameExists(username, email, possibleMatches) {
+	
+	return possibleMatches.indexOf(username) > -1 || possibleMatches.indexOf(email) > -1;
+}
+
+function createUser(first, middle, last, email, username) {
+	
+	//gs.info(username);
+	var newUser = new GlideRecord('sys_user');
+	newUser.first_name = first;
+	newUser.middle_name = middle;
+	newUser.last_name = last;
+	newUser.email = email;
+	newUser.user_name = username;
+	var userSysID = newUser.insert();
+	
+	return userSysID;
+}
+
+function findPossibleMatches(first, last) {
+	
+	var grGet = new GlideRecord('sys_user');
+	var firstChar = first.toLowerCase().charAt(0);
+	grGet.addEncodedQuery('user_nameSTARTSWITH' + firstChar + '^user_nameLIKE' + last + 'NQemailSTARTSWITH' + firstChar + '^emailLIKE' + last);
+	
+	grGet.query();
+	
+	var possibleMatches = [];
+	
+	while (grGet.next()) {
+		
+		possibleMatches.push(grGet.user_name + "");
+		possibleMatches.push(grGet.email + "");
+		
+	}
+	return possibleMatches;
+}
+
+/*
+
+//UNFINISHED
+function newUser() {
+	
+	var gr = new GlideRecord("sys_user");
+	
+	//LOOK TO SET USERS ACL AND ROLES
+	for (i = 0; i < parsedResponse.data.data.length; i++) {
+		
+		//Duplicate help
+		var firstName = tempUser[0].toString();
+		var lastName = tempUser[1].toString();
+		var len = firstName.length;
+		var fncurrent = 1;
+		var lnsuffix = "";
+		var lncount = 0;
+		var newUserName;
+		var unique = false;
+		
+		while (unique == false) {
+			newUserName = firstname.substring(0, fncurrent).toLowerCase() + lastname.toLowerCase() + lnsuffix;
+			
+			
+			gr.initialize();
+			
+			var tempUser = userDB[i];
+			gr.addQuery("user_name", tempUser[0]+tempUser[1]);
+			gr.first_name = tempUser[0];
+			gr.last_name = tempUser[1];
+			gr.password_needs_reset = true;
+			gr.user_password.setDisplayValue("changeme");
+			
+			gr.query();
+			
+			if (gr.next())
+				
+			
+			if (fncurrent < len) fncurrent = fncurrent + 1;
+				
+			
+			else { lncount = lncount + 1; lnsuffix = lncount; }
+				
+				
+				else { gs.log("Final username " + newusername);
+					
+					
+					unique = true;
+					
+					
+				}
+			}
+		}
+	}
+	*/]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-26 13:54:13</sys_created_on>
         <sys_id>cbbe51b7db721300f8275385ca96194c</sys_id>
-        <sys_mod_count>122</sys_mod_count>
+        <sys_mod_count>159</sys_mod_count>
         <sys_name>TEST_syncZenefits</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_include_cbbe51b7db721300f8275385ca96194c</sys_update_name>
-        <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-28 19:01:12</sys_updated_on>
+        <sys_updated_by>ryanma</sys_updated_by>
+        <sys_updated_on>2018-07-11 12:58:07</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -10,62 +10,166 @@
         <messages/>
         <name>APP_oL</name>
         <order/>
-        <script><![CDATA[function onLoad() {
-	//Type appropriate comment here, and begin script below
+        <script><![CDATA[//------- Constants ----------
+
+var TASK_CLOSED = 3;
+
+//---------- Helper Functions -------
+
+function setLaborAndContractReadOnly(){
+	g_form.setReadOnly('u_contract_code_string', true);
+	g_form.setReadOnly('u_labor_category_string', true);
+}
+
+/*
+@function() - searches for "Course Title" in the description to 
+count the courses and displays them accordingly
+*/
+function displayCorrectNumberOfCourseFields(){
+	var temp = g_form.getValue('description');
+	var count = (temp.match(/Course Title/g) || []).length;
 	
-	//first task
-	if( g_form.getValue('number').substring(0,4) == "APP1"){
-		
-		g_form.setSectionDisplay("course_approval", false);
-		
-		if( g_form.getValue('u_hr_state').toString() == "Closed"){
-			g_form.setReadOnly('u_contract_code', true);
-			g_form.setReadOnly('u_labor_category', true);
-			g_form.setReadOnly('u_approval', true);
-			g_form.setReadOnly('u_work_notes_comments', true);
-			g_form.setReadOnly('u_immediate_reimbursement', true);
-		}
+	if( count == 2 ){
+		g_form.setDisplay('u_course_2_approval', true);
+		g_form.setDisplay('u_course_2_comments', true);
 	}
 	
-	//second task
-	else{
+	else if( count == 3 ){
+		g_form.setDisplay('u_course_2_approval', true);
+		g_form.setDisplay('u_course_2_comments', true);
+		g_form.setDisplay('u_course_3_approval', true);
+		g_form.setDisplay('u_course_3_comments', true);
+	}
+	
+	setAllCoursesReadOnly();
+}
+
+function setAllCoursesReadOnly(){
+	g_form.setReadOnly('u_course_1_approval', true);
+	g_form.setReadOnly('u_course_2_approval', true);
+	g_form.setReadOnly('u_course_3_approval', true);
+	g_form.setReadOnly('u_course_1_comments', true);
+	g_form.setReadOnly('u_course_2_comments', true);
+	g_form.setReadOnly('u_course_3_comments', true);
+}
+
+function setApprovalAndWorkNotesReadOnly(){
+	g_form.setReadOnly('u_approval', true);
+	g_form.setReadOnly('u_work_notes_comments', true);
+}
+
+//---------- HR Functions ---------
+
+function removeUnnecessaryFieldsHR1(){
+	g_form.setSectionDisplay("course_approval", false);
+	g_form.setDisplay('u_proposed_reimbursement', false);
+	g_form.setDisplay('u_hr_approver_notes', false);
+	g_form.setDisplay('u_contract_code_string', false);
+	g_form.setDisplay('u_labor_category_string', false);
+}
+
+function setAllHR1ReadOnly(){
+	setLaborAndContractReadOnly();
+	g_form.setReadOnly('u_approval', true);
+	g_form.setReadOnly('u_work_notes_comments', true);
+	g_form.setReadOnly('u_immediate_reimbursement', true);
+}
+
+function removeUnnecessaryFieldsHR2(){
+	g_form.setSectionDisplay("course_approval", true);
+	g_form.setDisplay('u_course_2_approval', false);
+	g_form.setDisplay('u_course_3_approval', false);
+	g_form.setDisplay('u_course_2_comments', false);
+	g_form.setDisplay('u_course_3_comments', false);
+	g_form.setDisplay('u_approval', false);
+	
+	g_form.setDisplay('u_proposed_reimbursement', false);
+	g_form.setDisplay('u_hr_approver_notes', false);
+	g_form.setDisplay('u_work_notes_comments', false);
+	
+	g_form.setDisplay('u_contract_code', false);
+	g_form.setDisplay('u_labor_category', false);
+}
+
+function setAllHR2ReadOnly(){
+	setLaborAndContractReadOnly();
+	g_form.setReadOnly('u_course_1_approval', true);
+	g_form.setReadOnly('u_course_2_approval', true);
+	g_form.setReadOnly('u_course_3_approval', true);
+	g_form.setReadOnly('u_course_1_comments', true);
+	g_form.setReadOnly('u_course_2_comments', true);
+	g_form.setReadOnly('u_course_3_comments', true);
+	g_form.setReadOnly('u_work_notes_comments', true);
+	g_form.setReadOnly('u_immediate_reimbursement', true);
+}
+
+//------------- FN Functions ---------------
+
+function removeUnnecessaryFieldsFin1(){
+	g_form.setSectionDisplay("course_approval", false);
+	g_form.setDisplay('u_immediate_reimbursement', false);
+	g_form.setDisplay('u_financial_notes', false);
+	g_form.setDisplay('u_contract_code', false);
+	g_form.setDisplay('u_labor_category', false);
+}
+
+function removeUnnecessaryFieldsFin2(){
+	g_form.setSectionDisplay("course_approval", true);
+	g_form.setDisplay('u_course_2_approval', false);
+	g_form.setDisplay('u_course_3_approval', false);
+	g_form.setDisplay('u_course_2_comments', false);
+	g_form.setDisplay('u_course_3_comments', false);
+	
+	g_form.setDisplay('u_contract_code', false);
+	g_form.setDisplay('u_labor_category', false);
+	
+	g_form.setDisplay('u_immediate_reimbursement', false);
+	g_form.setDisplay('u_financial_notes', false);
+	g_form.setDisplay('u_hr_approver_notes', false);
+}
+
+/*
+@function() - main function
+*/
+function onLoad() {
+	//Type appropriate comment here, and begin script below
+	
+	//first hr task
+	if( g_form.getValue('number').substring(0,3) === "HR1"){
 		
-		g_form.setSectionDisplay("course_approval", true);
-		g_form.setDisplay('u_course_2_approval', false);
-		g_form.setDisplay('u_course_3_approval', false);
-		g_form.setDisplay('u_course_2_comments', false);
-		g_form.setDisplay('u_course_3_comments', false);
-		g_form.setDisplay('u_approval', false);
+		removeUnnecessaryFieldsHR1();
 		
-		var temp = g_form.getValue('description');
-		var count = (temp.match(/Course Title/g) || []).length;
+		if( g_form.getValue('state').toString() == TASK_CLOSED)
+			setAllHR1ReadOnly();
+	}
+	
+	//first fn task
+	else if( g_form.getValue('number').substring(0,3) === "FN1" ){
+		removeUnnecessaryFieldsFin1();
+		setLaborAndContractReadOnly();
 		
-		if( count == 2 ){
-			g_form.setDisplay('u_course_2_approval', true);
-			g_form.setDisplay('u_course_2_comments', true);
-		} 
+		if( g_form.getValue('state').toString() == TASK_CLOSED)
+			setApprovalAndWorkNotesReadOnly();
+	}
+	
+	//second hr task
+	else if( g_form.getValue('number').substring(0,3) === "HR2" ){
 		
-		else if( count == 3 ){
-			g_form.setDisplay('u_course_2_approval', true);
-			g_form.setDisplay('u_course_2_comments', true);
-			g_form.setDisplay('u_course_3_approval', true);
-			g_form.setDisplay('u_course_3_comments', true);
-		}
+		removeUnnecessaryFieldsHR2();
+		displayCorrectNumberOfCourseFields();
 		
+		if( g_form.getValue('state').toString() == TASK_CLOSED)
+			setAllHR2ReadOnly();	
+	}
+	
+	//second fn task
+	else if( g_form.getValue('number').substring(0,3) === "FN2" ){
+		removeUnnecessaryFieldsFin2();
+		displayCorrectNumberOfCourseFields();
+		setLaborAndContractReadOnly();
 		
-		g_form.setReadOnly('u_contract_code', true);
-		g_form.setReadOnly('u_labor_category', true);
-		
-		if( g_form.getValue('u_hr_state').toString() == "Closed"){
-			g_form.setReadOnly('u_course_1_approval', true);
-			g_form.setReadOnly('u_course_2_approval', true);
-			g_form.setReadOnly('u_course_3_approval', true);
-			g_form.setReadOnly('u_course_1_comments', true);
-			g_form.setReadOnly('u_course_2_comments', true);
-			g_form.setReadOnly('u_course_3_comments', true);
-			g_form.setReadOnly('u_work_notes_comments', true);
-			g_form.setReadOnly('u_immediate_reimbursement', true);
-		}
+		if( g_form.getValue('state').toString() == TASK_CLOSED)
+			setApprovalAndWorkNotesReadOnly();
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -74,7 +178,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0d5d0df7db321300f8275385ca9619f7</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>APP_oL</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -82,7 +186,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_0d5d0df7db321300f8275385ca9619f7</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-06-28 13:59:36</sys_updated_on>
+        <sys_updated_on>2018-07-13 12:19:41</sys_updated_on>
         <table>x_237286_training_records_needing_approval</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

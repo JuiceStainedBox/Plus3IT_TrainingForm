@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Training Reimbursement ">5aaf1b86db321300f8275385ca96199d</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>My records</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_237286_training_training_reimbursement_records</name>
+        <order>50</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>&amp;sysparm_fixed_query=opened_by=javascript:gs.getUserID()</query>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>ericsmith</sys_created_by>
+        <sys_created_on>2018-06-29 12:12:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0fe4643cdb031300f8275385ca9619d5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>My records</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_app_module_0fe4643cdb031300f8275385ca9619d5</sys_update_name>
+        <sys_updated_by>ericsmith</sys_updated_by>
+        <sys_updated_on>2018-06-29 12:17:07</sys_updated_on>
+        <timeline_page/>
+        <title>My records</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

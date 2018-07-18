@@ -2,6 +2,6 @@
 <database>
     <element attributes="ref_ac_columns_search=true,global_search_config_handler=UserConfig,all_tables.text_index_translations=true,ref_ac_order_by=name,ref_ac_columns=email,display_image=photo,ref_auto_completer=AJAXTableCompleter,iterativeDelete=true,metadata_link_exempt=true" create_roles="user_admin" defaultsort="-1" dynamic_creation_script="dynamicUserCreation(current, value);" label="User" max_length="40" name="sys_user" text_index="true" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Certifications" max_length="4000" name="x_237286_training_certifications" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Training Budget" max_length="100" name="x_237286_training_training_budget" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Training Budget" max_length="100" name="x_237286_training_training_budget" read_only="true" type="string"/>
     </element>
 </database>

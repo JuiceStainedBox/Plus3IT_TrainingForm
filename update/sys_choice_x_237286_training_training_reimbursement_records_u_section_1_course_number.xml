@@ -43,6 +43,25 @@
             <dependent_value/>
             <element>u_section_1_course_number</element>
             <hint/>
+            <inactive>true</inactive>
+            <label>4</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>0</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06a963cedb321300f8275385ca9619b6</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-07-02 15:37:10</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_course_number</element>
+            <hint/>
             <inactive>false</inactive>
             <label>2</label>
             <language>en</language>
@@ -62,6 +81,25 @@
             <dependent_value/>
             <element>u_section_1_course_number</element>
             <hint/>
+            <inactive>true</inactive>
+            <label>5</label>
+            <language>en</language>
+            <name>x_237286_training_training_reimbursement_records</name>
+            <sequence>1</sequence>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cea963cedb321300f8275385ca9619b7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>justinpark</sys_updated_by>
+            <sys_updated_on>2018-07-02 15:37:10</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_section_1_course_number</element>
+            <hint/>
             <inactive>false</inactive>
             <label>3</label>
             <language>en</language>
@@ -76,44 +114,6 @@
             <sys_updated_by>ryanma</sys_updated_by>
             <sys_updated_on>2018-06-21 15:10:20</sys_updated_on>
             <value>3</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>u_section_1_course_number</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>4</label>
-            <language>en</language>
-            <name>x_237286_training_training_reimbursement_records</name>
-            <sequence>3</sequence>
-            <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>06a963cedb321300f8275385ca9619b6</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 15:10:20</sys_updated_on>
-            <value>4</value>
-        </sys_choice>
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>u_section_1_course_number</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>5</label>
-            <language>en</language>
-            <name>x_237286_training_training_reimbursement_records</name>
-            <sequence>4</sequence>
-            <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-21 13:26:22</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>cea963cedb321300f8275385ca9619b7</sys_id>
-            <sys_mod_count>1</sys_mod_count>
-            <sys_updated_by>ryanma</sys_updated_by>
-            <sys_updated_on>2018-06-21 15:10:20</sys_updated_on>
-            <value>5</value>
         </sys_choice>
         <sys_choice_set action="INSERT_OR_UPDATE">
             <element>u_section_1_course_number</element>

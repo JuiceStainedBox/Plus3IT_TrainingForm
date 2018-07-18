@@ -24,7 +24,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>[Master] Tuition and Training Reimbursement Request Form</name>
+        <name>[Master] Training Reimbursement TEST ITEM</name>
         <no_cart>false</no_cart>
         <no_order>false</no_order>
         <no_order_now>false</no_order_now>
@@ -50,14 +50,14 @@
         <sys_created_by>justinpark</sys_created_by>
         <sys_created_on>2018-06-26 17:22:14</sys_created_on>
         <sys_id>fd9f8afbdbf21300f8275385ca961976</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>[Master] Tuition and Training Reimbursement Request Form</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>[Master] Training Reimbursement TEST ITEM</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sc_cat_item_fd9f8afbdbf21300f8275385ca961976</sys_update_name>
         <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-28 19:06:41</sys_updated_on>
+        <sys_updated_on>2018-07-02 12:02:11</sys_updated_on>
         <template/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>

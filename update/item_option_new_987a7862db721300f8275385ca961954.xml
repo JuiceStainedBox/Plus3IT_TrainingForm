@@ -3,7 +3,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="[Section 1] Tuition and Training Reimbursement Request Form">6caae012db361300f8275385ca9619f6</cat_item>
+        <cat_item display_value="[Section 1] Training Reimbursement TEST ITEM">6caae012db361300f8275385ca9619f6</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
@@ -41,7 +41,8 @@
         <order>550</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
-        <question_text>I acknowledge that I am requesting reimbursement for fees and expenses associated with the above course(s) in accordance with the Plus3 IT Systems Tuition Reimbursement policy.</question_text>
+        <question_text>I acknowledge that I am requesting reimbursement for fees and expenses associated with the above course(s) in accordance with the Plus3 IT Systems Tuition Reimbursement policy!&#13;
+</question_text>
         <read_roles/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
@@ -60,14 +61,15 @@
         <sys_created_by>justinpark</sys_created_by>
         <sys_created_on>2018-06-22 13:58:36</sys_created_on>
         <sys_id>987a7862db721300f8275385ca961954</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>I acknowledge that I am requesting reimbursement for fees and expenses associated with the above course(s) in accordance with the Plus3 IT Systems Tuition Reimbursement policy.</sys_name>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>I acknowledge that I am requesting reimbursement for fees and expenses associated with the above course(s) in accordance with the Plus3 IT Systems Tuition Reimbursement policy!&#13;
+</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>item_option_new_987a7862db721300f8275385ca961954</sys_update_name>
-        <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-06-25 12:57:25</sys_updated_on>
+        <sys_updated_by>ericsmith</sys_updated_by>
+        <sys_updated_on>2018-07-04 12:28:23</sys_updated_on>
         <table/>
         <tooltip/>
         <type>11</type>

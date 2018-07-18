@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[dialog.setTitle('Terms and Conditions'); //Set the dialog title
+dialog.setSize(600,600); //Set the dialog size
+dialog.adjustSize();
+dialog.removeCloseDecoration(); //Remove the dialog close icon
+dialog.setPreference('cancel_url', 'catalog_home.do?sysparm_view=catalog_default'); //Set optional cancel redirect URL
+dialog.render(); //Open the dialog
+
+function termsOK(){
+//Gets called if the 'OK' dialog button is clicked
+//Make sure terms have been accepted
+var terms = gel('accept_terms').value;
+if(terms != 'true'){
+//If terms are false stop submission
+alert("Please accept the terms and conditions to continue your order.");
+return false;
+}
+
+//If accept checkbox is true do this... 
+GlideDialogWindow.get().destroy(); //Close the dialog window
+g_form.setValue('terms_ok', 'Yes');
+}
+ 
+function termsCancel(){
+//Gets called if the 'Cancel' dialog button is clicked
+GlideDialogWindow.get().destroy(); //Close the dialog window
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_237286_training_terms_and_conditions_dialog.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<g:ui_form>
+   <!-- Get values from dialog preferences passed in -->
+   <g:evaluate var="jvar_cancel_url"
+     expression= "RP.getWindowProperties().get('cancel_url')" />
+   <input type="hidden" id="cancel_url" value="${jvar_cancel_url}" />
+   <table width="100%">
+     <tr>
+       <td>
+          <div style="width:584px; height:400px; overflow:auto; border: 1px solid gray;">
+             ENTER YOUR TERMS HERE...
+          </div>
+       </td>
+     </tr>
+     <tr>
+       <td>
+         <div style="margin-top: 10px;">
+           <!-- Pull in 'ui_checkbox' UI Macro for accept checkbox -->
+           <g:ui_checkbox id="accept_terms" name="accept_terms" value="false"/>
+           <label for="load_demo">I accept these terms and conditions.</label>  
+         </div>
+       </td>
+     </tr>
+     <tr>
+       <td colspan="2">
+       </td>
+     </tr>
+     <tr id="dialog_buttons">
+        <td colspan="2" align="right">
+           <!-- Pull in 'dialog_buttons_ok_cancel' UI Macro for submit/cancel buttons -->
+           <g:dialog_buttons_ok_cancel ok="return termsOK()" cancel="termsCancel()" ok_type="button" cancel_type="button"/>
+        </td>
+     </tr>
+  </table>
+</g:ui_form>]]></html>
+        <name>terms_and_conditions_dialog</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>justinpark</sys_created_by>
+        <sys_created_on>2018-07-02 17:27:45</sys_created_on>
+        <sys_id>952acd75db071300f8275385ca961942</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>terms_and_conditions_dialog</sys_name>
+        <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
+        <sys_update_name>sys_ui_page_952acd75db071300f8275385ca961942</sys_update_name>
+        <sys_updated_by>ericsmith</sys_updated_by>
+        <sys_updated_on>2018-07-06 11:38:37</sys_updated_on>
+    </sys_ui_page>
+</record_update>
