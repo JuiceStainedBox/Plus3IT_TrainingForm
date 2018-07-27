@@ -38,7 +38,7 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_employee_date_submitted</name>
-        <order>1010</order>
+        <order>1110</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>Date of Signature</question_text>
@@ -60,14 +60,14 @@
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-29 19:27:49</sys_created_on>
         <sys_id>b0d84afcdb071300f8275385ca96191d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>u_employee_date_submitted</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Date of Signature</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>item_option_new_b0d84afcdb071300f8275385ca96191d</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-11 16:52:52</sys_updated_on>
+        <sys_updated_on>2018-07-23 12:11:26</sys_updated_on>
         <table/>
         <tooltip/>
         <type>9</type>

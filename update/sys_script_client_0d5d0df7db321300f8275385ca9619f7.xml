@@ -53,6 +53,15 @@ function setAllCoursesReadOnly(){
 	g_form.setReadOnly('u_course_3_comments', true);
 }
 
+function setAllCoursesOpenOnly(){
+	g_form.setReadOnly('u_course_1_approval', false);
+	g_form.setReadOnly('u_course_2_approval', false);
+	g_form.setReadOnly('u_course_3_approval', false);
+	g_form.setReadOnly('u_course_1_comments', false);
+	g_form.setReadOnly('u_course_2_comments', false);
+	g_form.setReadOnly('u_course_3_comments', false);
+}
+
 function setApprovalAndWorkNotesReadOnly(){
 	g_form.setReadOnly('u_approval', true);
 	g_form.setReadOnly('u_work_notes_comments', true);
@@ -71,6 +80,8 @@ function removeUnnecessaryFieldsHR1(){
 function setAllHR1ReadOnly(){
 	setLaborAndContractReadOnly();
 	g_form.setReadOnly('u_approval', true);
+	g_form.setReadOnly('u_contract_code', true);
+	g_form.setReadOnly('u_labor_category', true);
 	g_form.setReadOnly('u_work_notes_comments', true);
 	g_form.setReadOnly('u_immediate_reimbursement', true);
 }
@@ -132,7 +143,6 @@ function removeUnnecessaryFieldsFin2(){
 @function() - main function
 */
 function onLoad() {
-	//Type appropriate comment here, and begin script below
 	
 	//first hr task
 	if( g_form.getValue('number').substring(0,3) === "HR1"){
@@ -157,6 +167,7 @@ function onLoad() {
 		
 		removeUnnecessaryFieldsHR2();
 		displayCorrectNumberOfCourseFields();
+		setAllCoursesOpenOnly();
 		
 		if( g_form.getValue('state').toString() == TASK_CLOSED)
 			setAllHR2ReadOnly();	
@@ -178,7 +189,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0d5d0df7db321300f8275385ca9619f7</sys_id>
-        <sys_mod_count>62</sys_mod_count>
+        <sys_mod_count>65</sys_mod_count>
         <sys_name>APP_oL</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -186,7 +197,7 @@ function onLoad() {
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_0d5d0df7db321300f8275385ca9619f7</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-07-13 12:19:41</sys_updated_on>
+        <sys_updated_on>2018-07-23 11:53:08</sys_updated_on>
         <table>x_237286_training_records_needing_approval</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

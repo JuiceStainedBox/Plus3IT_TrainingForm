@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="6" type="collection">
+    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="7" type="collection">
         <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Total Amount Reimbursed" max_length="40" name="u_amount_reimbursed" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Current Form State" max_length="200" name="u_cf_state" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Labor Category" mandatory="true" max_length="40" name="u_choice_10" type="string">
@@ -47,6 +47,9 @@
         <element attributes="edge_encryption_enabled=true" label="Course II Comments" max_length="2000" name="u_course_2_code" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Course III Approval" max_length="40" name="u_course_3_approval" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Course III Comments" max_length="2000" name="u_course_3_code" read_only="true" type="string"/>
+        <element label="Course Duration" max_length="40" name="u_course_duration" read_only="true" type="glide_date_time"/>
+        <element label="Course Duration" max_length="40" name="u_course_duration_2" read_only="true" type="glide_date_time"/>
+        <element label="Course Duration" max_length="40" name="u_course_duration_3" read_only="true" type="glide_date_time"/>
         <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_currency_2" type="currency"/>
         <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_currency_5" type="currency"/>
         <element label="Date Received" max_length="40" name="u_date_received" read_only="true" type="glide_date"/>
@@ -70,7 +73,7 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Approval Action" max_length="200" name="u_section_1_approval_action" read_only="true" type="string"/>
-        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Taxi/Uber Costs" max_length="20" name="u_section_1_car_cost" read_only="true" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Taxi/Uber Costs" max_length="20" name="u_section_1_car_cost" read_only="true" type="price"/>
         <element attributes="edge_encryption_enabled=true" default="0" label="Contract Code" mandatory="true" max_length="40" name="u_section_1_contract_code" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="--None--" label="Contract Code" max_length="100" name="u_section_1_contract_code_string" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Contract Type" mandatory="true" max_length="40" name="u_section_1_contract_type" type="string">
@@ -90,7 +93,7 @@
         </element>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Cost" max_length="20" name="u_section_1_course_1_cost" type="price"/>
         <element label="End Date" max_length="40" name="u_section_1_course_1_end_date" read_only="true" type="glide_date"/>
-        <element label="Hours of Training / Exam" mandatory="true" max_length="40" name="u_section_1_course_1_hours" type="glide_time"/>
+        <element label="Time of Training" max_length="40" name="u_section_1_course_1_hours" type="glide_time"/>
         <element attributes="edge_encryption_enabled=true" label="Justification" max_length="1000" name="u_section_1_course_1_justification" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Course Title" mandatory="true" max_length="200" name="u_section_1_course_1_name" type="string"/>
         <element label="Start Date" max_length="40" name="u_section_1_course_1_start_date" read_only="true" type="glide_date"/>
@@ -118,7 +121,7 @@
         <element attributes="edge_encryption_enabled=true" label="Justification" max_length="1000" name="u_section_1_course_5_justification" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Course Title" max_length="200" name="u_section_1_course_5_name" type="string"/>
         <element label="Start Date" max_length="40" name="u_section_1_course_5_start_date" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Estimated Course Cost" max_length="40" name="u_section_1_course_cost" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Course Cost" max_length="40" name="u_section_1_course_cost" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="How Many Courses" max_length="40" name="u_section_1_course_number" read_only="true" type="string">
             <choice>
                 <element label="1" sequence="0" value="1"/>
@@ -126,7 +129,7 @@
                 <element label="3" sequence="2" value="3"/>
             </choice>
         </element>
-        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Per Diem Cost" max_length="20" name="u_section_1_everyday_cost" read_only="true" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Per Diem Cost" max_length="20" name="u_section_1_everyday_cost" read_only="true" type="price"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Financial Aid" max_length="40" name="u_section_1_financial_aid" read_only="true" type="string">
             <choice>
                 <element label="I am receiving financial assistance (Post 9/11 GI Bill" sequence="0" value="I am receiving financial assistance (Post 9/11 GI Bill"/>
@@ -136,8 +139,8 @@
         <element attributes="edge_encryption_enabled=true" choice="1" label="Financial Aid" mandatory="true" max_length="40" name="u_section_1_financial_assistance" type="string">
             <choice/>
         </element>
-        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Flight Cost" max_length="20" name="u_section_1_flight_cost" read_only="true" type="price"/>
-        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Estimated Hotel Cost" max_length="20" name="u_section_1_hotel_cost" read_only="true" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Flight Cost" max_length="20" name="u_section_1_flight_cost" read_only="true" type="price"/>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Hotel Cost" max_length="20" name="u_section_1_hotel_cost" read_only="true" type="price"/>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Immediate Amount Reimbursed" mandatory="true" max_length="20" name="u_section_1_immediate_reimbursed" type="price"/>
         <element attributes="edge_encryption_enabled=true" default="$0.00" label="Immediate Reimbursement" max_length="40" name="u_section_1_immediate_reimbursement_string" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="--None--" label="Labor Category" max_length="100" name="u_section_1_labor_category_string" read_only="true" type="string"/>
@@ -154,14 +157,14 @@
         <element label="Date of Signature" max_length="40" name="u_section_1_signature_date_hr" read_only="true" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="By typing my name here, I authorize this as my official signature." max_length="200" name="u_section_1_signature_signed_em" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Signature" max_length="200" name="u_section_1_signature_signed_hr" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Estimated Total Cost" max_length="40" name="u_section_1_total_cost" read_only="true" type="string"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="3" label="Training Type" max_length="40" name="u_section_1_training_type" read_only="true" type="string">
+        <element attributes="edge_encryption_enabled=true" default="$0.00" label="Total Cost" max_length="40" name="u_section_1_total_cost" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="a" label="Training Type" max_length="40" name="u_section_1_training_type" read_only="true" type="string">
             <choice>
-                <element label="Conferences/ Seminars" sequence="0" value="1"/>
-                <element label="Education" sequence="1" value="2"/>
-                <element label="Trainings with Certifications" sequence="2" value="3"/>
-                <element label="Trainings with No Certification" sequence="3" value="4"/>
-                <element label="Other" sequence="4" value="-1"/>
+                <element label="Conference / Seminar" sequence="0" value="a"/>
+                <element label="Education" sequence="1" value="b"/>
+                <element label="Training with a Certification" sequence="2" value="c"/>
+                <element label="Training without a Certification" sequence="3" value="d"/>
+                <element label="Other" sequence="4" value="e"/>
             </choice>
         </element>
         <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" default="0" label="Actual Cost" max_length="20" name="u_section_2_course_1_cost" type="price"/>

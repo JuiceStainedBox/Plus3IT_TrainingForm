@@ -4,25 +4,25 @@
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-11 14:17:03</sys_created_on>
-            <sys_id>2f05f624db931300f8275385ca96190c</sys_id>
+            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
+            <sys_id>454c5270dbe31300f8275385ca961943</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-11 14:17:03</sys_updated_on>
+            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
             <text>Please complete the bottom portion AFTER the training is completed to request reimbursement. Once the fields in black are completed by employee, please send this form back to training@plus3it.com for the FINAL signature. Once you receive this form with 2 signatures from HR/Training, reimbursement is approved. Please submit this form, along with receipt of payment, tuition statement, and passing grade (if applicable) for reimbursement in Nexonia</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>2f05f624db931300f8275385ca96190c</element>
+            <element>454c5270dbe31300f8275385ca961943</element>
             <position>0</position>
             <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-11 14:17:03</sys_created_on>
-            <sys_id>ef05f624db931300f8275385ca96190c</sys_id>
+            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
+            <sys_id>094c5270dbe31300f8275385ca961943</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Section 2" display_value="Section 2" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">46e6ffc6db721300f8275385ca961923</sys_ui_section>
             <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-11 14:17:03</sys_updated_on>
+            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>

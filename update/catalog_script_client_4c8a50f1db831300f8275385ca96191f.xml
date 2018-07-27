@@ -35,10 +35,19 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 		return;
 	}
 	var courseCost = parseFloat(g_form.getValue('u_section_1_course_cost').replace(/,/g,"").replace("$",""));
+	courseCost = courseCost == Number(courseCost) ? courseCost: 0;
+	
 	var flightCost = parseFloat(g_form.getValue('u_section_1_flight_cost').replace(/,/g,"").replace("$",""));
+	flightCost = flightCost == Number(flightCost) ? flightCost: 0;
+	
 	var hotelCost = parseFloat(g_form.getValue('u_section_1_hotel_cost').replace(/,/g,"").replace("$",""));
+	hotelCost = hotelCost == Number(hotelCost) ? hotelCost: 0;
+	
 	var carCost = parseFloat(g_form.getValue('u_section_1_car_cost').replace(/,/g,"").replace("$",""));
+	carCost = carCost == Number(carCost) ? carCost: 0;
+	
 	var dailyCost = parseFloat(g_form.getValue('u_section_1_everyday_cost').replace(/,/g,"").replace("$",""));
+	dailyCost = dailyCost == Number(dailyCost) ? dailyCost: 0;
 
 	/*
 	var newCourse1 = g_form.getDecimalValue('u_section_1_course_1_cost') * 100;
@@ -69,15 +78,15 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c8a50f1db831300f8275385ca96191f</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>TRA_oCh_sec1_carCost</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_4c8a50f1db831300f8275385ca96191f</sys_update_name>
-        <sys_updated_by>ericsmith</sys_updated_by>
-        <sys_updated_on>2018-07-02 18:11:33</sys_updated_on>
+        <sys_updated_by>jueunpark</sys_updated_by>
+        <sys_updated_on>2018-07-26 18:57:00</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

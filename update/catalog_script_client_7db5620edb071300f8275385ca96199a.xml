@@ -41,38 +41,14 @@
 			}
 			//g_form.addInfoMessage(g_user.firstName + ' ' + user_middle_name + ' ' + g_user.lastName);
 			if(g_form.getValue('u_section_1_signature_signed_em') == compare){
-				g_form.addInfoMessage('Valid Signature');
+				//g_form.addInfoMessage('Valid Signature');
 			}
 			else{
 				g_form.addErrorMessage('Invalid Signature');
 				g_form.setValue('u_section_1_checkbox_complete', oldValue);
 			}
-		}
-		
-		/*
-		g_form.addInfoMessage("Please review the <a href='https://drive.google.com/open?id=1Fgqm0SNc5wBPEOHgj7dYi_KOGvX1d0UY' target='_blank'>Plus3 IT Tuition and Training Reimbursement Policy</a>");
-		confirm("Please review the <a href='https://drive.google.com/open?id=1Fgqm0SNc5wBPEOHgj7dYi_KOGvX1d0UY' target='_blank'>Plus3 IT Tuition and Training Reimbursement Policy</a>");
- 		*/
+		}	
 	}
-	
-	/*
-	try {
-		var dialog = new GlideModal('x_237286_training_test', false, 600);
-	} catch (ex) {
-		//gs.error("There was an error doing something", ex);
-		//alert("Error: " + ex);
-	}
- 	*/
-	//var dialog = new GlideModal('x_237286_training_test');
-	//var dialog = new GlideModal('x_237286_training_terms_and_conditions_dialog',false, 600);
-	//dialog.setTitle('Terms and Conditions'); //Set the dialog title
-	//dialog.setSize(600,600); //Set the dialog size
-	//dialog.adjustSize();
-	//dialog.removeCloseDecoration(); //Remove the dialog close icon
-	//dialog.setPreference('cancel_url', 'catalog_home.do?sysparm_view=catalog_default'); //Set optional cancel redirect URL
-	//dialog.render(); //Open the dialog
-	//Type appropriate comment here, and begin script below
-	
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>jueunpark</sys_created_by>
@@ -80,7 +56,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7db5620edb071300f8275385ca96199a</sys_id>
-        <sys_mod_count>79</sys_mod_count>
+        <sys_mod_count>80</sys_mod_count>
         <sys_name>TRA_oCh_sec1_checkbox</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -88,7 +64,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_7db5620edb071300f8275385ca96199a</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-11 17:14:51</sys_updated_on>
+        <sys_updated_on>2018-07-26 18:44:02</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

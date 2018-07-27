@@ -17,7 +17,30 @@
         <messages/>
         <name>TRA_oCh_sec1_course3</name>
         <order/>
-        <script><![CDATA[/*
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	//exits function if function is called as part of a form load or has no newValue
+	if (isLoading || newValue === '') {
+		return;
+	}
+	var courseNum = parseInt(g_form.getValue('u_section_1_course_number'));
+	
+	var newTotal = 0;
+	var n;
+	var val;
+	for (var i = 1; i <= courseNum; i++){
+		 val = g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","").match("[0-9.]*$") ? g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","") : 0;
+		
+		n = parseFloat(val);
+		
+		if (Number(n) == n)
+		    newTotal += n;
+	}
+	//regex below adds commas for every three digits for better readability
+	var newEstimatedTotalString = "$" + newTotal/*.replace(/\B(?=(\d{3})+(?!\d))/g, ",")*/;
+	g_form.setValue('u_section_1_course_cost', newEstimatedTotalString);
+}
+
+/*
 	function - gets each estimated cost field for all 3 courses, adds them, and sets the 
 	total estimated course cost; integer math used to avoid accuracy problems caused by 
 	floating point numbers
@@ -26,7 +49,7 @@
 	newValue   -  the value the widget has after the change.
 	isLoading  - identifies whether the change occurs as part of a form load.
 	isTemplate - identifies whether the change occurs as part of a template load.
-*/
+
 
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	
@@ -41,37 +64,34 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	var val;
 	for (var i = 1; i <= courseNum; i++)
 	{
-		 val = g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","").match("[0-9.]*$") ? g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","") : 0;
+		 val = g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","").matches("[0-9.]*") ? g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","") : 0;
 		
 		n = parseFloat(val);
 		
 		if (Number(n) == n)
 		    newTotal += n;
 	}
-
-
-	
 	
 	//regex below adds commas for every three digits for better readability
-	var newEstimatedTotalString = "$" + newTotal/*.replace(/\B(?=(\d{3})+(?!\d))/g, ",")*/;	
+	var newEstimatedTotalString = "$" + newTotal/*.replace(/\B(?=(\d{3})+(?!\d))/g, ",");	
 
 	g_form.setValue('u_section_1_course_cost', newEstimatedTotalString);
-}]]></script>
+}*/]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>justinpark</sys_created_by>
         <sys_created_on>2018-07-02 13:35:46</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c635d4bddb431300f8275385ca96192a</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>TRA_oCh_sec1_course3</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_c635d4bddb431300f8275385ca96192a</sys_update_name>
-        <sys_updated_by>ericsmith</sys_updated_by>
-        <sys_updated_on>2018-07-03 16:03:47</sys_updated_on>
+        <sys_updated_by>jueunpark</sys_updated_by>
+        <sys_updated_on>2018-07-26 19:03:19</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

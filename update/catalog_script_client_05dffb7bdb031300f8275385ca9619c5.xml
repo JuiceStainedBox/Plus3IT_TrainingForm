@@ -22,43 +22,62 @@
 		return;
 	}
 	//education
-	if (2 == parseInt(newValue)) {
+	if ('b' == newValue) {
+		g_form.setDisplay('u_section_1_other', false);
+		g_form.setDisplay('u_section_1_course_number', true);
 		setCourseDisplay('1', true);
 		setCourseDisplay('2', false);
 		setCourseDisplay('3', false);
-		g_form.setDisplay('u_section_1_other_text', false);
-		g_form.setDisplay('u_section_1_course_number', true);
+		update();
 	}
 	//other
-	else if(-1 == parseInt(newValue)) {
+	else if('e' == newValue) {
+		g_form.setDisplay('u_section_1_other', true);
+		g_form.setDisplay('u_section_1_course_number', false);
+		g_form.setValue('u_section_1_course_number', '1');
 		setCourseDisplay('1', true);
 		setCourseDisplay('2', false);
 		setCourseDisplay('3', false);
-		g_form.setDisplay('u_section_1_other_text', true);
-		g_form.setDisplay('u_section_1_course_number', false);
-		g_form.setValue('u_section_1_course_number', 1);
+		update();
 	}
-	//rest of options
+	//rest of options: conferences/seminars & trainings
 	else {
-		if(g_form.getValue('u_section_1_course_number') == 2 || g_form.getValue('u_section_1_course_number') == 3){
-			g_form.setValue('u_section_1_course_number', 1);
-		}
-		g_form.setDisplay('u_section_1_other_text', false);
+		g_form.setDisplay('u_section_1_other', false);
 		g_form.setDisplay('u_section_1_course_number', false);
-		g_form.setValue('u_section_1_course_number', 1);
+		g_form.setValue('u_section_1_course_number', '1');
 		setCourseDisplay('1', true);
 		setCourseDisplay('2', false);
 		setCourseDisplay('3', false);
+		update();
 	}
 }
 function setCourseDisplay(num, b) {
+	g_form.setValue('u_section_1_course_' + num + '_cost', '0');
 	g_form.setDisplay('u_section_1_course_' + num + '_cost', b);
 	g_form.setDisplay('u_section_1_course_' + num + '_justification', b);
-	g_form.setDisplay('u_section_1_course_' + num + '_hours', b);
+	g_form.setDisplay('u_course_duration_' + num, b);
 	g_form.setDisplay('u_section_1_course_' + num + '_start_date', b);
 	g_form.setDisplay('u_section_1_course_' + num + '_end_date', b);
 	g_form.setDisplay('u_section_1_course_' + num + '_name', b);
 	g_form.setDisplay('u_break_' + num, b);
+}
+function update(){
+	var courseNum = parseInt(g_form.getValue('u_section_1_course_number'));
+	
+	var newTotal = 0;
+	var n;
+	var val;
+	for (var i = 1; i <= courseNum; i++){
+		 val = g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","").match("[0-9.]*$") ? g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","") : 0;
+		
+		n = parseFloat(val);
+		
+		if (Number(n) == n)
+		    newTotal += n;
+	}
+	//regex below adds commas for every three digits for better readability
+	var newEstimatedTotalString = "$" + newTotal/*.replace(/\B(?=(\d{3})+(?!\d))/g, ",")*/;
+	g_form.setValue('u_section_1_course_cost', newEstimatedTotalString);
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>jueunpark</sys_created_by>
@@ -66,7 +85,7 @@ function setCourseDisplay(num, b) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>05dffb7bdb031300f8275385ca9619c5</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>TRA_oCh_sec1_typeTraining</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -74,7 +93,7 @@ function setCourseDisplay(num, b) {
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_05dffb7bdb031300f8275385ca9619c5</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-09 12:10:12</sys_updated_on>
+        <sys_updated_on>2018-07-27 11:32:49</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

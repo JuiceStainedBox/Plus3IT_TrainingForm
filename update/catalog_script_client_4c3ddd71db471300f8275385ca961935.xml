@@ -22,60 +22,66 @@
 		return;
 	}
 	var typeTraining = g_form.getValue('u_section_1_training_type');
-	if (typeTraining == 2){
+	if (typeTraining == 'b'){
 		if (1 == parseInt(newValue)) {
 			setCourseDisplay('1', true);
 			setCourseDisplay('2', false);
 			setCourseDisplay('3', false);
+			update();
 		}
 		else if(2 == parseInt(newValue)) {
 			setCourseDisplay('1', true);
 			setCourseDisplay('2', true);
 			setCourseDisplay('3', false);
+			update();
 		}
 		else {
 			setCourseDisplay('1', true);
 			setCourseDisplay('2', true);
 			setCourseDisplay('3', true);
+			update();
 		}
 	}
 	else{
-		g_form.setValue('u_section_1_course_number', 1);
+		g_form.setValue('u_section_1_course_number', '1');
 		g_form.addInfoMessage('Can only have multiple courses if \"Type of Training\" is \"Education\"');
 	}
-	var courseNum = parseInt(newValue);
-	var newTotal = 0;
-	var n;
-	var val;
-	for (var i = 1; i <= courseNum; i++) {
-		val = g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","").match("[0-9.]*") ? g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","") : 0;
-		
-		n = parseFloat(val);
-		
-		if (Number(n) == n) {
-			newTotal += n;
-		}
-	}
-	//regex below adds commas for every three digits for better readability
-	var newEstimatedTotalString = "$" + newTotal; //.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-		g_form.setValue('u_section_1_course_cost', newEstimatedTotalString);
-	}
+}
 	function setCourseDisplay(num, b) {
+		g_form.setValue('u_section_1_course_' + num + '_cost', '0');
 		g_form.setDisplay('u_section_1_course_' + num + '_cost', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_justification', b);
-		g_form.setDisplay('u_section_1_course_' + num + '_hours', b);
+		g_form.setDisplay('u_course_duration_' + num, b);
 		g_form.setDisplay('u_section_1_course_' + num + '_start_date', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_end_date', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_name', b);
 		g_form.setDisplay('u_break_' + num, b);
-	}]]></script>
+	}
+function update(){
+	var courseNum = parseInt(g_form.getValue('u_section_1_course_number'));
+	
+	var newTotal = 0;
+	var n;
+	var val;
+	for (var i = 1; i <= courseNum; i++){
+		 val = g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","").match("[0-9.]*$") ? g_form.getValue('u_section_1_course_' + i + '_cost').replace(/,/g,"").replace("$","") : 0;
+		
+		n = parseFloat(val);
+		
+		if (Number(n) == n)
+		    newTotal += n;
+	}
+	//regex below adds commas for every three digits for better readability
+	var newEstimatedTotalString = "$" + newTotal/*.replace(/\B(?=(\d{3})+(?!\d))/g, ",")*/;
+	g_form.setValue('u_section_1_course_cost', newEstimatedTotalString);
+}]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>ericsmith</sys_created_by>
         <sys_created_on>2018-07-02 19:16:44</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c3ddd71db471300f8275385ca961935</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>TRA_oCh_sec1_courseNumber</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -83,7 +89,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_4c3ddd71db471300f8275385ca961935</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-09 12:03:00</sys_updated_on>
+        <sys_updated_on>2018-07-27 11:30:49</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

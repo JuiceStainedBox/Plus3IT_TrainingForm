@@ -18,8 +18,8 @@
         <name>TRA_sec2_oL</name>
         <order/>
         <script><![CDATA[function onLoad() {
-	g_form.setReadOnly('u_section_2_total_reimbursement_requested', true);
-	g_form.setReadOnly('u_section_2_signature_date_em', true);
+	g_form.setReadOnly('u_employee_date_submitted', true);
+	g_form.setReadOnly('u_reimbursement_requested', true);
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>jueunpark</sys_created_by>
@@ -27,7 +27,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>94946ae0db531300f8275385ca96197d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>TRA_sec2_oL</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -35,7 +35,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_94946ae0db531300f8275385ca96197d</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-11 13:49:56</sys_updated_on>
+        <sys_updated_on>2018-07-23 11:38:36</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>

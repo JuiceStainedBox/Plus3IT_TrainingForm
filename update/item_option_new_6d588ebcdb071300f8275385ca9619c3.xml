@@ -18,7 +18,7 @@
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <example_text>ex. $6,290.54</example_text>
+        <example_text>$0.00</example_text>
         <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
@@ -38,7 +38,7 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_reimbursement_requested</name>
-        <order>1015</order>
+        <order>1115</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>Total Reimbursement Requested</question_text>
@@ -60,14 +60,14 @@
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-29 19:24:44</sys_created_on>
         <sys_id>6d588ebcdb071300f8275385ca9619c3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>u_reimbursement_requested</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Total Reimbursement Requested</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>item_option_new_6d588ebcdb071300f8275385ca9619c3</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-11 16:52:32</sys_updated_on>
+        <sys_updated_on>2018-07-23 12:11:29</sys_updated_on>
         <table/>
         <tooltip/>
         <type>6</type>

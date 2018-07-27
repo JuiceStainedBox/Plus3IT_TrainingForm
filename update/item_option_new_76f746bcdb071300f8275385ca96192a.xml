@@ -38,7 +38,7 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_section_2_acknowledgement_heading</name>
-        <order>940</order>
+        <order>1035</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>I acknowledge that if I voluntarily or involuntarily (except for layoff) terminate employment within one year upon course completion for which I&#13;
@@ -61,14 +61,15 @@ received tuition reimbursement from the Company, I agree and understand that I a
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-29 19:23:11</sys_created_on>
         <sys_id>76f746bcdb071300f8275385ca96192a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>u_section_2_acknowledgement_heading</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>I acknowledge that if I voluntarily or involuntarily (except for layoff) terminate employment within one year upon course completion for which I&#13;
+received tuition reimbursement from the Company, I agree and understand that I am required to reimburse the C</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>item_option_new_76f746bcdb071300f8275385ca96192a</sys_update_name>
-        <sys_updated_by>justinpark</sys_updated_by>
-        <sys_updated_on>2018-07-02 12:05:39</sys_updated_on>
+        <sys_updated_by>jueunpark</sys_updated_by>
+        <sys_updated_on>2018-07-23 12:19:15</sys_updated_on>
         <table/>
         <tooltip/>
         <type>11</type>

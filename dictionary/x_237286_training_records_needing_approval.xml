@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="16" type="collection">
+    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="7" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Approval Action" mandatory="true" max_length="40" name="u_approval" type="string">
             <choice>
                 <element label="Not Yet Processed" sequence="0" value="noProcess"/>

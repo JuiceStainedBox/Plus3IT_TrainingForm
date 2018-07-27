@@ -50,26 +50,31 @@ var rec = new GlideRecord('x_237286_training_training_reimbursement_records');
 gs.info('producer DOT ' + producer.u_section_2_sys_id); //shows: producer DOT 22c05768dbd31300f8275385ca961983
 gs.info('producer GET REC ' + rec.get(producer.u_section_2_sys_id)); //shows: true - meaning it gets the record
 if(rec.get(producer.u_section_2_sys_id)){
-	rec.u_section_2_course_1_name = producer.u_section_2_course_1_name;
-	rec.u_section_2_course_1_grade = producer.u_section_2_course_1_grade;
-	rec.u_section_2_course_1_date = producer.u_section_2_course_1_date;
-	rec.u_section_2_course_1_cost = producer.u_section_2_course_1_cost;
-	
-	rec.u_section_2_course_2_name = producer.u_section_2_course_2_name;
-	rec.u_section_2_course_2_grade = producer.u_section_2_course_2_grade;
-	rec.u_section_2_course_2_date = producer.u_section_2_course_2_date;
-	rec.u_section_2_course_2_cost = producer.u_section_2_course_2_cost;
-	
-	rec.u_section_2_course_3_name = producer.u_section_2_course_3_name;
-	rec.u_section_2_course_3_grade = producer.u_section_2_course_3_grade;
-	rec.u_section_2_course_3_date = producer.u_section_2_course_3_date;
-	rec.u_section_2_course_3_cost = producer.u_section_2_course_3_cost;
-	
-	rec.u_employee_signature_2 = producer.u_employee_signature_2;
-	rec.u_employee_date_submitted = producer.u_employee_date_submitted;
-	rec.u_reimbursement_requested = producer.u_reimbursement_requested;
-	
-	rec.update();
+	if(rec.state == 'Closed Approved I') {
+		rec.u_section_2_course_1_name = producer.u_section_2_course_1_name;
+		rec.u_section_2_course_1_grade = producer.u_section_2_course_1_grade;
+		rec.u_section_2_course_1_date = producer.u_section_2_course_1_date;
+		rec.u_section_2_course_1_cost = producer.u_section_2_course_1_cost;
+		
+		rec.u_section_2_course_2_name = producer.u_section_2_course_2_name;
+		rec.u_section_2_course_2_grade = producer.u_section_2_course_2_grade;
+		rec.u_section_2_course_2_date = producer.u_section_2_course_2_date;
+		rec.u_section_2_course_2_cost = producer.u_section_2_course_2_cost;
+		
+		rec.u_section_2_course_3_name = producer.u_section_2_course_3_name;
+		rec.u_section_2_course_3_grade = producer.u_section_2_course_3_grade;
+		rec.u_section_2_course_3_date = producer.u_section_2_course_3_date;
+		rec.u_section_2_course_3_cost = producer.u_section_2_course_3_cost;
+		
+		rec.u_section_1_car_cost = producer.u_section_2_car_cost;
+		rec.u_section_1_everyday_cost = producer.u_section_2_everyday_cost;
+		
+		rec.u_employee_signature_2 = producer.u_employee_signature_2;
+		rec.u_employee_date_submitted = producer.u_employee_date_submitted;
+		rec.u_reimbursement_requested = producer.u_reimbursement_requested;
+		
+		rec.update();
+	}
 }
 ]]></script>
         <short_description>Section 2 for Employee's to submit information for trainings that will be reimbursed</short_description>
@@ -79,14 +84,14 @@ if(rec.get(producer.u_section_2_sys_id)){
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-29 18:51:16</sys_created_on>
         <sys_id>0e5ebd34db071300f8275385ca9619ea</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>[Section 2] Tuition and Training Reimbursement Request Form</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sc_cat_item_producer_0e5ebd34db071300f8275385ca9619ea</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-13 17:24:49</sys_updated_on>
+        <sys_updated_on>2018-07-23 12:18:40</sys_updated_on>
         <table_name>x_237286_training_training_reimbursement_records</table_name>
         <template/>
         <type>item</type>

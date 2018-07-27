@@ -18,7 +18,7 @@
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <example_text>ex. $2,012.32</example_text>
+        <example_text>ex. 2012.32</example_text>
         <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
@@ -60,14 +60,14 @@
         <sys_created_by>ryanma</sys_created_by>
         <sys_created_on>2018-06-29 18:59:40</sys_created_on>
         <sys_id>c872c2f4db071300f8275385ca96194a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Course 1 Actual Cost</sys_name>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
         <sys_policy/>
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>item_option_new_c872c2f4db071300f8275385ca96194a</sys_update_name>
-        <sys_updated_by>ryanma</sys_updated_by>
-        <sys_updated_on>2018-06-29 18:59:40</sys_updated_on>
+        <sys_updated_by>jueunpark</sys_updated_by>
+        <sys_updated_on>2018-07-23 12:20:17</sys_updated_on>
         <table/>
         <tooltip/>
         <type>6</type>
