@@ -3,149 +3,149 @@
     <sys_ui_section caption="Expenditures" section_id="b8fa2302db721300f8275385ca96196b" sys_domain="global" table="x_237286_training_training_reimbursement_records" version="3" view="">
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>8d4c5270dbe31300f8275385ca961935</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>5a1aed87db631300f8275385ca9619de</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <text>The below expenditures are subject to reimbursement before training is completed.</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>814c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>5e1aed87db631300f8275385ca9619de</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <text>The below expenditures are subject to reimbursement after training is completed.</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>8d4c5270dbe31300f8275385ca961935</element>
+            <element>5a1aed87db631300f8275385ca9619de</element>
             <position>0</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>454c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>121aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_section_1_flight_cost</element>
             <position>1</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>c54c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>921aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_section_1_hotel_cost</element>
             <position>2</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>494c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>161aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>814c5270dbe31300f8275385ca961936</element>
+            <element>5e1aed87db631300f8275385ca9619de</element>
             <position>3</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>c94c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>961aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_section_1_car_cost</element>
             <position>4</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>4d4c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>1a1aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_section_1_everyday_cost</element>
             <position>5</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>cd4c5270dbe31300f8275385ca961936</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>9a1aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>6</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>414c5270dbe31300f8275385ca961937</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>1e1aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_section_1_course_cost</element>
             <position>7</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>c14c5270dbe31300f8275385ca961937</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>9e1aed87db631300f8275385ca9619df</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_section_1_total_cost</element>
             <position>8</position>
-            <sys_created_by>jueunpark</sys_created_by>
-            <sys_created_on>2018-07-24 17:22:56</sys_created_on>
-            <sys_id>454c5270dbe31300f8275385ca961937</sys_id>
+            <sys_created_by>jackretcher</sys_created_by>
+            <sys_created_on>2018-07-31 13:30:04</sys_created_on>
+            <sys_id>121aed87db631300f8275385ca9619e0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Expenditures" display_value="Expenditures" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">b8fa2302db721300f8275385ca96196b</sys_ui_section>
-            <sys_updated_by>jueunpark</sys_updated_by>
-            <sys_updated_on>2018-07-24 17:22:56</sys_updated_on>
+            <sys_updated_by>jackretcher</sys_updated_by>
+            <sys_updated_on>2018-07-31 13:30:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

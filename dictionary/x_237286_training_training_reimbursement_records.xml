@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="7" type="collection">
+    <element extends="task" label="Training Reimbursement Records" max_length="40" name="x_237286_training_training_reimbursement_records" sizeclass="2" type="collection">
         <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Total Amount Reimbursed" max_length="40" name="u_amount_reimbursed" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Current Form State" max_length="200" name="u_cf_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Charge Code" max_length="40" name="u_charge_code" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Labor Category" mandatory="true" max_length="40" name="u_choice_10" type="string">
             <choice>
                 <element label="EAADS:Direct Labor:SM/FE Level 4 (Gr 3) Hourly" sequence="0" value="0"/>
@@ -43,10 +44,13 @@
         <element attributes="edge_encryption_enabled=true" label="Course I Comments" max_length="2000" name="u_course_1_code" read_only="true" type="string"/>
         <element attributes="omit_sys_original=true" label="Estimated Cost" mandatory="true" max_length="20" name="u_course_1_cost" type="currency"/>
         <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_course_1_currency" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Course Duration/Hours" max_length="40" name="u_course_1_duration_hours" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Course II Approval" max_length="40" name="u_course_2_approval" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Course II Comments" max_length="2000" name="u_course_2_code" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Course Duration/Hours" max_length="40" name="u_course_2_duration_hours" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="Not Yet Processed" label="Course III Approval" max_length="40" name="u_course_3_approval" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Course III Comments" max_length="2000" name="u_course_3_code" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Course Duration/Hours" max_length="40" name="u_course_3_duration_hours" read_only="true" type="string"/>
         <element label="Course Duration" max_length="40" name="u_course_duration" read_only="true" type="glide_date_time"/>
         <element label="Course Duration" max_length="40" name="u_course_duration_2" read_only="true" type="glide_date_time"/>
         <element label="Course Duration" max_length="40" name="u_course_duration_3" read_only="true" type="glide_date_time"/>

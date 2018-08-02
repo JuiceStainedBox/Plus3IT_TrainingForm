@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_documentation element="u_section_1_contract_code_string" label="Contract Code" language="en" table="x_237286_training_training_reimbursement_records">
+    <sys_documentation element="u_course_1_duration_hours" label="Course Duration/Hours" language="en" table="x_237286_training_training_reimbursement_records">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>u_section_1_contract_code_string</element>
+            <element>u_course_1_duration_hours</element>
             <help/>
             <hint/>
-            <label>Contract Code</label>
+            <label>Course Duration/Hours</label>
             <language>en</language>
             <name>x_237286_training_training_reimbursement_records</name>
-            <plural>Contract Codes</plural>
+            <plural>Course Duration/Hours</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-06-26 12:59:38</sys_created_on>
-            <sys_id>87735d7fdb321300f8275385ca96191a</sys_id>
-            <sys_mod_count>2</sys_mod_count>
-            <sys_name>Contract Code</sys_name>
+            <sys_created_on>2018-07-31 13:28:26</sys_created_on>
+            <sys_id>9eb9e987db631300f8275385ca961930</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Course Duration/Hours</sys_name>
             <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
             <sys_policy/>
             <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
-            <sys_update_name>sys_documentation_x_237286_training_training_reimbursement_records_u_section_1_contract_code_string_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_237286_training_training_reimbursement_records_u_course_1_duration_hours_en</sys_update_name>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-31 12:54:27</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:26</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

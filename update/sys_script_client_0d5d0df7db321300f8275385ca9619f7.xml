@@ -73,8 +73,14 @@ function removeUnnecessaryFieldsHR1(){
 	g_form.setSectionDisplay("course_approval", false);
 	g_form.setDisplay('u_proposed_reimbursement', false);
 	g_form.setDisplay('u_hr_approver_notes', false);
+	g_form.setDisplay('u_charge_code_string', false);
 	g_form.setDisplay('u_contract_code_string', false);
 	g_form.setDisplay('u_labor_category_string', false);
+	
+	/*UPDATE: 7-31-18
+	fin notes are hidden.
+	*/
+	g_form.setDisplay('u_financial_notes', false);
 }
 
 function setAllHR1ReadOnly(){
@@ -84,6 +90,7 @@ function setAllHR1ReadOnly(){
 	g_form.setReadOnly('u_labor_category', true);
 	g_form.setReadOnly('u_work_notes_comments', true);
 	g_form.setReadOnly('u_immediate_reimbursement', true);
+	g_form.setReadOnly('u_charge_code', true);
 }
 
 function removeUnnecessaryFieldsHR2(){
@@ -98,8 +105,10 @@ function removeUnnecessaryFieldsHR2(){
 	g_form.setDisplay('u_hr_approver_notes', false);
 	g_form.setDisplay('u_work_notes_comments', false);
 	
+	g_form.setDisplay('u_charge_code', false);
 	g_form.setDisplay('u_contract_code', false);
 	g_form.setDisplay('u_labor_category', false);
+	g_form.setDisplay('u_financial_notes', false);
 }
 
 function setAllHR2ReadOnly(){
@@ -189,7 +198,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0d5d0df7db321300f8275385ca9619f7</sys_id>
-        <sys_mod_count>65</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_name>APP_oL</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -197,7 +206,7 @@ function onLoad() {
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_client_0d5d0df7db321300f8275385ca9619f7</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-07-23 11:53:08</sys_updated_on>
+        <sys_updated_on>2018-07-31 14:59:45</sys_updated_on>
         <table>x_237286_training_records_needing_approval</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

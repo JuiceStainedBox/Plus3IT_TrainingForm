@@ -28,7 +28,15 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[//-------- Constants ---------------
+        <script><![CDATA[/*
+UPDATE: 7-31-18
+After taking out finance tasks, the state changes technically are not needed.
+Ex: Awaiting Finance I. They have been left in place however, in case some type
+of reviewer is needed and put in place at a later date. It also works as a proof
+of concept.
+*/
+
+//-------- Constants ---------------
 
 var TASK_OPEN = 1;
 var TASK_IN_PROGRESS = 2;
@@ -45,6 +53,20 @@ var DB_FIN_APPROVE_2 = 16;
 //-------- Helper Functions ----------------
 
 
+
+/*
+function() - shows display value for corresponding backend value
+@str - toString() variable returned by the choice object; corresponds with a distinct display
+variable that HR selected orginially
+@return - the display value that HR originally selected
+*/
+function displayChargeCode(str){
+	switch(str){
+		case "-1": return "--None--";
+		case "0": return "Non-Billable G&A";
+		case "1": return "Non-Billable OH";
+	}
+}
 
 /*
 @function() - shows display value for corresponding backend value
@@ -66,6 +88,7 @@ function displayContractCode( str ){
 		case "8": return "ManTech International";
 		case "9": return "Non-Billable G&A";
 		case "10": return "Non-Billable OH";
+		
 	}
 }
 
@@ -179,8 +202,8 @@ see createDatabase() for master db creation
  */
 function firstTaskProgression(current, db){
 	
-	if( isReopen() )
-		return;
+	//if( isReopen() )
+		//return;
 	
 	var approval = current.u_approval.toString();
 	
@@ -208,6 +231,7 @@ see createDatabase() for master db creation
  */
 function updateOrigRecordSec1( current, db, approval ){
 	
+	db.u_charge_code = displayChargeCode( current.u_charge_code.toString() );
 	db.u_section_1_contract_code_string =
 	displayContractCode( current.u_contract_code.toString() );
 	db.u_section_1_labor_category_string =
@@ -237,8 +261,8 @@ see createDatabase() for master db creation
  */
 function secondTaskProgression(current, db){
 	
-	if( isReopenHR2() )
-		return;
+	//if( isReopenHR2() )
+		//return;
 	
 	var temp = current.description;
 	var masterCount = (temp.match(/Course Title/g) || []).length;
@@ -523,7 +547,7 @@ function updateOrigRecordFin2( current, db){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>294ba3c4db071300f8275385ca9619c4</sys_id>
-        <sys_mod_count>109</sys_mod_count>
+        <sys_mod_count>114</sys_mod_count>
         <sys_name>APP_onUpdate</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -531,7 +555,7 @@ function updateOrigRecordFin2( current, db){
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>sys_script_294ba3c4db071300f8275385ca9619c4</sys_update_name>
         <sys_updated_by>jackretcher</sys_updated_by>
-        <sys_updated_on>2018-07-18 15:59:46</sys_updated_on>
+        <sys_updated_on>2018-07-31 14:14:22</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

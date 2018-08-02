@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="7" type="collection">
+    <element extends="task" label="Records Needing Approval" max_length="40" name="x_237286_training_records_needing_approval" sizeclass="4" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="3" default="noProcess" label="Approval Action" mandatory="true" max_length="40" name="u_approval" type="string">
             <choice>
                 <element label="Not Yet Processed" sequence="0" value="noProcess"/>
@@ -10,6 +10,14 @@
         </element>
         <element attributes="edge_encryption_enabled=true" label="Approver" max_length="200" name="u_approver" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" default="$0.00" label="Taxi/Uber Cost" max_length="40" name="u_car_cost" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="-1" label="Charge Code" mandatory="true" max_length="40" name="u_charge_code" type="string">
+            <choice>
+                <element label="--None--" sequence="0" value="-1"/>
+                <element label="Non-Billable G&amp;A" sequence="1" value="0"/>
+                <element label="Non-Billable OH" sequence="2" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Charge Code" max_length="40" name="u_charge_code_string" read_only="true" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_2" type="string">
             <choice>
                 <element label="Choice 1" sequence="0" value="Choice 1"/>

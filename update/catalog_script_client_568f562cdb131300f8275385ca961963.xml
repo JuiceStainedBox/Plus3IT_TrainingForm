@@ -42,7 +42,7 @@
 			}
 			//g_form.addInfoMessage(g_user.firstName + ' ' + user_middle_name + ' ' + g_user.lastName);
 			if(g_form.getValue('u_employee_signature_2') == compare){
-				g_form.addInfoMessage('Valid Signature');
+				//g_form.addInfoMessage('Valid Signature');
 			}
 			else{
 				g_form.addErrorMessage('Invalid Signature');
@@ -57,7 +57,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>568f562cdb131300f8275385ca961963</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>TRA_oCh_sec2_checkbox</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -65,7 +65,7 @@
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_568f562cdb131300f8275385ca961963</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-11 17:15:05</sys_updated_on>
+        <sys_updated_on>2018-07-31 14:15:00</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

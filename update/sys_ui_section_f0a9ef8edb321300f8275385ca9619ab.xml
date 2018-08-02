@@ -5,27 +5,27 @@
             <element>u_section_1_course_1_name</element>
             <position>0</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>1261596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>eeb9e987db631300f8275385ca961983</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_course_duration</element>
+            <element>u_course_1_duration_hours</element>
             <position>1</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>9261596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>62b9e987db631300f8275385ca961984</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>u_section_1_course_1_cost</element>
             <position>2</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>1661596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>e2b9e987db631300f8275385ca961984</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>9661596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>66b9e987db631300f8275385ca961984</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -61,13 +61,13 @@
             <element>u_section_1_course_1_start_date</element>
             <position>4</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>1a61596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>e6b9e987db631300f8275385ca961984</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -75,13 +75,13 @@
             <element>u_section_1_course_1_end_date</element>
             <position>5</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>9a61596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>6ab9e987db631300f8275385ca961984</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -89,13 +89,13 @@
             <element>u_section_1_course_1_justification</element>
             <position>6</position>
             <sys_created_by>jackretcher</sys_created_by>
-            <sys_created_on>2018-07-20 14:43:29</sys_created_on>
-            <sys_id>1e61596fdb575300f8275385ca961925</sys_id>
+            <sys_created_on>2018-07-31 13:28:27</sys_created_on>
+            <sys_id>eab9e987db631300f8275385ca961984</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Course 1" display_value="Course 1" name="x_237286_training_training_reimbursement_records" sys_domain="global" view="Default view">f0a9ef8edb321300f8275385ca9619ab</sys_ui_section>
             <sys_updated_by>jackretcher</sys_updated_by>
-            <sys_updated_on>2018-07-20 14:43:29</sys_updated_on>
+            <sys_updated_on>2018-07-31 13:28:27</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

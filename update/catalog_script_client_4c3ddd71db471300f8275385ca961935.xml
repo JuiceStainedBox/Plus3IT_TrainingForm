@@ -51,7 +51,7 @@
 		g_form.setValue('u_section_1_course_' + num + '_cost', '0');
 		g_form.setDisplay('u_section_1_course_' + num + '_cost', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_justification', b);
-		g_form.setDisplay('u_course_duration_' + num, b);
+		g_form.setDisplay('u_course_' + num + '_duration_hours', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_start_date', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_end_date', b);
 		g_form.setDisplay('u_section_1_course_' + num + '_name', b);
@@ -81,7 +81,7 @@ function update(){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c3ddd71db471300f8275385ca961935</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>TRA_oCh_sec1_courseNumber</sys_name>
         <sys_overrides/>
         <sys_package display_value="Training Reimbursement Workflow" source="x_237286_training">b2ce9fc2db321300f8275385ca961998</sys_package>
@@ -89,7 +89,7 @@ function update(){
         <sys_scope display_value="Training Reimbursement Workflow">b2ce9fc2db321300f8275385ca961998</sys_scope>
         <sys_update_name>catalog_script_client_4c3ddd71db471300f8275385ca961935</sys_update_name>
         <sys_updated_by>jueunpark</sys_updated_by>
-        <sys_updated_on>2018-07-27 11:30:49</sys_updated_on>
+        <sys_updated_on>2018-07-31 18:04:38</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
